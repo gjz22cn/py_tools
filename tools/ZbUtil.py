@@ -1,3 +1,5 @@
+# -*-coding:utf-8-*-
+
 import os
 import numpy as np
 import pandas as pd
@@ -35,7 +37,7 @@ class ZbUtil:
         if type == 'week':
             file = os.path.join(self.stocks_wk_dir, st_code + '.csv')
 
-        #cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
+        # cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
         cols = ['trade_date', 'open', 'high', 'low', 'close', 'vol', 'amount']
         df = pd.read_csv(file, header=0, usecols=cols, dtype={'trade_date': str}, encoding='utf-8')
 
@@ -54,7 +56,7 @@ class ZbUtil:
             df['D'] = df['K'].ewm(com=2).mean()
             df['J'] = 3 * df['K'] - 2 * df['D']
         except:
-            print("calc kdj for %s failed!"%(ts_code))
+            print("calc kdj for %s failed!" % (ts_code))
             return None
 
         df = pd.concat((df, pd.DataFrame(columns=['KDJ_label', 'stock'])), axis=1)
@@ -105,7 +107,7 @@ class ZbUtil:
                 df_out = pd.concat((df_out, df_stock), axis=0)
 
         print(df_out)
-        file_out = os.path.join(self.zb_dir, 'kdj_'+self.calc_date+'.csv')
+        file_out = os.path.join(self.zb_dir, 'kdj_' + self.calc_date + '.csv')
         df_out.to_csv(file_out, mode='w', index=False, encoding="utf_8_sig")
 
     def kdj_wk_filter(self, type):
@@ -119,12 +121,60 @@ class ZbUtil:
                 df_out = pd.concat((df_out, df_stock), axis=0)
 
         print(df_out)
-        file_out = os.path.join(self.zb_dir, 'kdj_wk_'+self.calc_date+'.csv')
+        file_out = os.path.join(self.zb_dir, 'kdj_wk_' + self.calc_date + '.csv')
+        df_out.to_csv(file_out, mode='w', index=False, encoding="utf_8_sig")
+
+    def mean_filter_one_stock(self, ts_code):
+        st_code = ts_code.split('.')[0]
+        file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
+
+        # cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
+        cols = ['trade_date', 'close', 'vol', 'amount']
+        df = pd.read_csv(file_stock, header=0, usecols=cols, dtype={'trade_date': str}, encoding='utf-8')
+
+        if df is None:
+            return False
+
+        v_20 = df['close'][-20:].values
+        v_a_len = len(v_20)
+        if v_a_len != 20:
+            print "%s's data is wrong %d" % (ts_code, v_a_len)
+            return False
+
+        mean = sum(v_20) / v_a_len
+
+        if v_20[v_a_len - 1] < mean:
+            print "%s: %f < mean %f" % (ts_code, v_20[v_a_len - 1], mean)
+            #return False
+
+        if abs(v_20[v_a_len - 1] - mean) > 0.01:
+            if v_20[v_a_len - 1] < mean:
+                return False
+
+        for i in range(15):
+            if v_20[18-i] > mean:
+                print "%s[%d]: %f > %f, skip" % (ts_code, 18-i, v_20[18-i], mean)
+                return False
+
+        return True
+
+    def mean_20_filter(self):
+        result = []
+        stocks = self.stUtil.get_all_stocks(type)
+        for stock in stocks:
+            show = self.mean_filter_one_stock(stock)
+            if show is True:
+                result.append(stock)
+
+        print result
+        file_out = os.path.join(self.zb_dir, 'mean_20_' + self.calc_date + '.csv')
+        df_out = pd.DataFrame(result, columns=[self.calc_date])
         df_out.to_csv(file_out, mode='w', index=False, encoding="utf_8_sig")
 
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
     zbUtil.set_calc_date('202004529')
-    #zbUtil.kdj_filter(3)
-    zbUtil.kdj_wk_filter(3)
+    # zbUtil.kdj_filter(3)
+    # zbUtil.kdj_wk_filter(3)
+    zbUtil.mean_20_filter()

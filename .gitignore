@@ -1,2 +1,5 @@
 stocks/*
 .idea/*
+zb/*
+.DS_Store
+*.pyc
