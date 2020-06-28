@@ -135,25 +135,36 @@ class ZbUtil:
         if df is None:
             return False
 
-        v_20 = df['close'][-20:].values
-        v_a_len = len(v_20)
-        if v_a_len != 20:
-            print "%s's data is wrong %d" % (ts_code, v_a_len)
+        df_39 = df['close'][-39:].reset_index()
+        if df_39.shape[0] != 39:
+            print "%s's data is wrong %d" % (ts_code, df_39.shape[0])
             return False
 
-        mean = sum(v_20) / v_a_len
+        v_20 = df_39['close'][-20:].values
+        m_20 = []
+        for i in range(20):
+            m_20.append(df_39['close'][i:i+20].mean())
 
-        if v_20[v_a_len - 1] < mean:
-            print "%s: %f < mean %f" % (ts_code, v_20[v_a_len - 1], mean)
-            #return False
+        if v_20[19] < m_20[19]:
+            return False
 
-        if abs(v_20[v_a_len - 1] - mean) > 0.01:
-            if v_20[v_a_len - 1] < mean:
-                return False
+        if v_20[18] < m_20[18]:
+            return False
 
-        for i in range(15):
-            if v_20[18-i] > mean:
-                print "%s[%d]: %f > %f, skip" % (ts_code, 18-i, v_20[18-i], mean)
+        if v_20[17] < m_20[17]:
+            return False
+
+        if v_20[19] < v_20[18]:
+            return False
+
+        if v_20[18] < v_20[17]:
+            return False
+
+        if v_20[17] < v_20[16]:
+            return False
+
+        for i in range(16):
+            if v_20[i] > m_20[i]:
                 return False
 
         return True
