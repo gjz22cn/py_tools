@@ -453,9 +453,9 @@ class DataUtil:
     def download_for_stocks_2(self, type, skip_date):
         stocks = self.get_all_stocks(type)
         for stock in stocks:
-            self.downloadClient.getStockDailyInfo(stock)
+            # self.downloadClient.getStockDailyInfo(stock)
             # down stock data using tushare
-            #self.downloadClient.get_data_for_stock_no_fenbi(stock, skip_date)
+            self.downloadClient.get_data_for_stock_no_fenbi(stock, skip_date)
             #self.downloadClient.get_wk_data_for_stock(stock, skip_date)
 
     # the last day's data, calculated from p230
@@ -887,10 +887,11 @@ if __name__ == '__main__':
     # steps for corr calc start
     #############################################################################
     # Step0: set global var
-    dataUtil.set_eva_date(20200624)
+    dataUtil.set_eva_date(20200703)
 
     # Step1: update stock data
-    dataUtil.download_for_stocks_2(3, '20200624')
+    #dataUtil.download_for_stocks_2(3, '20200703')
+    dataUtil.download_for_stocks_2(3, None)
 
     # Step2: concat all stocks by date close price
     #dataUtil.concat_all_stocks_by_date_range()

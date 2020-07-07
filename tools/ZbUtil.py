@@ -145,15 +145,6 @@ class ZbUtil:
         for i in range(20):
             m_20.append(df_39['close'][i:i+20].mean())
 
-        if v_20[19] < m_20[19]:
-            return False
-
-        if v_20[18] < m_20[18]:
-            return False
-
-        if v_20[17] < m_20[17]:
-            return False
-
         if v_20[19] < v_20[18]:
             return False
 
@@ -162,6 +153,10 @@ class ZbUtil:
 
         if v_20[17] < v_20[16]:
             return False
+
+        for i in range(16, 20):
+            if v_20[i] < m_20[i]:
+                return False
 
         for i in range(16):
             if v_20[i] > m_20[i]:
@@ -185,7 +180,7 @@ class ZbUtil:
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
-    zbUtil.set_calc_date('202004529')
+    zbUtil.set_calc_date('20200703')
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
     zbUtil.mean_20_filter()

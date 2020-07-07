@@ -3,3 +3,4 @@ stocks/*
 zb/*
 .DS_Store
 *.pyc
+tools/*.pyc

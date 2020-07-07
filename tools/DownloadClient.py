@@ -214,9 +214,10 @@ class DownloadClient:
             return
 
         last_date = df[-1:]['trade_date'].values[0]
-        if str(last_date) == skip_date:
-            print("skip", ts_code)
-            return
+        if skip_date is not None:
+            if str(last_date) == skip_date:
+                print("skip", ts_code)
+                return
 
         self.sleep_cnt += 1
         if self.sleep_cnt%5 == 0:
