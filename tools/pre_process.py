@@ -890,8 +890,8 @@ if __name__ == '__main__':
     dataUtil.set_eva_date(20200703)
 
     # Step1: update stock data
-    #dataUtil.download_for_stocks_2(3, '20200703')
-    dataUtil.download_for_stocks_2(3, None)
+    dataUtil.download_for_stocks_2(3, '20200710')
+    #dataUtil.download_for_stocks_2(3, None)
 
     # Step2: concat all stocks by date close price
     #dataUtil.concat_all_stocks_by_date_range()

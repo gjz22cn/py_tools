@@ -124,7 +124,50 @@ class ZbUtil:
         file_out = os.path.join(self.zb_dir, 'kdj_wk_' + self.calc_date + '.csv')
         df_out.to_csv(file_out, mode='w', index=False, encoding="utf_8_sig")
 
-    def mean_filter_one_stock(self, ts_code):
+    @staticmethod
+    def mean_filter_method_0(v_20, m_20):
+        for i in range(17, 20):
+            if v_20[i] > m_20[i]:
+                return False
+
+        if v_20[19] < v_20[18]:
+            return False
+
+        if v_20[18] < v_20[17]:
+            return False
+
+        if v_20[17] < v_20[16]:
+            return False
+
+        return True
+
+    @staticmethod
+    def mean_filter_method_1(v_20, m_20):
+        if v_20[19] < v_20[18]:
+            return False
+
+        if v_20[18] < v_20[17]:
+            return False
+
+        if v_20[17] < v_20[16]:
+            return False
+
+        for i in range(16, 20):
+            if v_20[i] < m_20[i]:
+                return False
+
+        for i in range(11, 16):
+            if v_20[i] > m_20[i]:
+                return False
+
+        '''
+        for i in range(16):
+            if v_20[i] > m_20[i]:
+                return False
+        '''
+        return True
+
+    def mean_filter_one_stock(self, result, ts_code):
         st_code = ts_code.split('.')[0]
         file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
 
@@ -145,42 +188,42 @@ class ZbUtil:
         for i in range(20):
             m_20.append(df_39['close'][i:i+20].mean())
 
-        if v_20[19] < v_20[18]:
-            return False
+        if self.mean_filter_method_0(v_20, m_20):
+            result[0].append(ts_code)
+            print "M1 add %s" % ts_code
 
-        if v_20[18] < v_20[17]:
-            return False
+        if self.mean_filter_method_1(v_20, m_20):
+            result[1].append(ts_code)
+            print "M2 add %s" % ts_code
 
-        if v_20[17] < v_20[16]:
-            return False
-
-        for i in range(16, 20):
-            if v_20[i] < m_20[i]:
-                return False
-
-        for i in range(16):
-            if v_20[i] > m_20[i]:
-                return False
-
-        return True
+        return result
 
     def mean_20_filter(self):
-        result = []
+        result = [list(), list()]
         stocks = self.stUtil.get_all_stocks(type)
         for stock in stocks:
-            show = self.mean_filter_one_stock(stock)
-            if show is True:
-                result.append(stock)
+            self.mean_filter_one_stock(result, stock)
 
-        print result
+        print result[0]
+        print result[1]
+        len0 = len(result[0])
+        len1 = len(result[1])
+
+        len_max = max(len0, len1)
+        for i in range(len_max - len0):
+            result[0].append(0)
+
+        for i in range(len_max - len1):
+            result[1].append(0)
+            
         file_out = os.path.join(self.zb_dir, 'mean_20_' + self.calc_date + '.csv')
-        df_out = pd.DataFrame(result, columns=[self.calc_date])
+        df_out = pd.DataFrame({'M0': result[0], 'M1': result[1]})
         df_out.to_csv(file_out, mode='w', index=False, encoding="utf_8_sig")
 
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
-    zbUtil.set_calc_date('20200703')
+    zbUtil.set_calc_date('20200710')
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
     zbUtil.mean_20_filter()
