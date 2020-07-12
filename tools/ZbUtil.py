@@ -4,6 +4,7 @@ import os
 import numpy as np
 import pandas as pd
 from StUtil import StUtil
+import scipy.signal as signal
 import matplotlib.pyplot as plt
 import time
 import datetime
@@ -220,10 +221,79 @@ class ZbUtil:
         df_out = pd.DataFrame({'M0': result[0], 'M1': result[1]})
         df_out.to_csv(file_out, mode='w', index=False, encoding="utf_8_sig")
 
+    def guaidian_one_stock(self, ts_code):
+        st_code = ts_code.split('.')[0]
+        file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
+
+        # cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
+        cols = ['trade_date', 'close', 'vol', 'amount']
+        df = pd.read_csv(file_stock, header=0, usecols=cols, dtype={'trade_date': str}, encoding='utf-8')
+
+        if df is None:
+            return False
+
+        df = df[-360:].reset_index()
+        v = np.array(df['close'].values)
+
+        len_v = len(v)
+        for i in range(len_v-4, len_v-9):
+            if len_v[i] > len_v[i+i]:
+                return False
+
+        #print
+        #index = signal.argrelextrema(v, np.less_equal)
+
+        top_idx = signal.argrelextrema(v, np.greater_equal)
+        bottom_idx = signal.argrelextrema(v, np.less_equal)
+
+        top_idx_len = len(top_idx[0])
+        bottom_idx_len = len(bottom_idx[0])
+
+        #print top_idx_len, top_idx
+        #print bottom_idx_len, bottom_idx
+
+        if bottom_idx[0][bottom_idx_len - 1] > top_idx[0][top_idx_len - 1]:
+            return False
+
+        if top_idx[0][top_idx_len - 1] - bottom_idx[0][bottom_idx_len - 1] < 3:
+            return False
+
+        if bottom_idx[0][bottom_idx_len - 1] - top_idx[0][top_idx_len - 2] < 3:
+            return False
+
+        if v[bottom_idx[0][bottom_idx_len - 1]] < v[bottom_idx[0][bottom_idx_len - 2]]:
+            return False
+
+        if v[bottom_idx[0][bottom_idx_len - 2]] < v[bottom_idx[0][bottom_idx_len - 3]]:
+            return False
+
+        #print v[signal.argrelextrema(v, np.less_equal)]
+        #print signal.argrelextrema(v, np.less_equal)
+        plt.figure(figsize=(16, 4))
+        plt.title(ts_code)
+        plt.plot(np.arange(len(v)), v)
+        plt.plot(signal.argrelextrema(v, np.greater_equal)[0], v[signal.argrelextrema(v, np.greater_equal)], 'o')
+        plt.plot(signal.argrelextrema(v, np.less_equal)[0], v[signal.argrelextrema(v, np.less_equal)], '+')
+        plt.show()
+
+        return True
+
+    def guaidian_filter(self):
+        result = []
+        stocks = self.stUtil.get_all_stocks(type)
+        for stock in stocks:
+            if self.guaidian_one_stock(stock):
+                result.append(stock)
+
+        file_out = os.path.join(self.zb_dir, 'guaidian_' + self.calc_date + '.csv')
+        df_out = pd.DataFrame({'guaidian': result})
+        df_out.to_csv(file_out, mode='w', index=False, encoding="utf_8_sig")
+
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
     zbUtil.set_calc_date('20200710')
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
-    zbUtil.mean_20_filter()
+    # zbUtil.mean_20_filter()
+    zbUtil.guaidian_filter()
