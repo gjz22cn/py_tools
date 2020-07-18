@@ -887,10 +887,10 @@ if __name__ == '__main__':
     # steps for corr calc start
     #############################################################################
     # Step0: set global var
-    dataUtil.set_eva_date(20200703)
+    dataUtil.set_eva_date(20200717)
 
     # Step1: update stock data
-    dataUtil.download_for_stocks_2(3, '20200710')
+    dataUtil.download_for_stocks_2(3, '20200717')
     #dataUtil.download_for_stocks_2(3, None)
 
     # Step2: concat all stocks by date close price

@@ -150,22 +150,14 @@ class ZbUtil:
         if v_20[18] < v_20[17]:
             return False
 
-        if v_20[17] < v_20[16]:
-            return False
-
-        for i in range(16, 20):
+        for i in range(18, 20):
             if v_20[i] < m_20[i]:
                 return False
 
-        for i in range(11, 16):
+        for i in range(13, 18):
             if v_20[i] > m_20[i]:
                 return False
 
-        '''
-        for i in range(16):
-            if v_20[i] > m_20[i]:
-                return False
-        '''
         return True
 
     def mean_filter_one_stock(self, result, ts_code):
@@ -255,7 +247,7 @@ class ZbUtil:
         if bottom_idx[0][bottom_idx_len - 1] > top_idx[0][top_idx_len - 1]:
             return False
 
-        if top_idx[0][top_idx_len - 1] - bottom_idx[0][bottom_idx_len - 1] < 3:
+        if top_idx[0][top_idx_len - 1] - bottom_idx[0][bottom_idx_len - 1] > 2:
             return False
 
         if bottom_idx[0][bottom_idx_len - 1] - top_idx[0][top_idx_len - 2] < 3:
@@ -292,8 +284,8 @@ class ZbUtil:
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
-    zbUtil.set_calc_date('20200710')
+    zbUtil.set_calc_date('20200717')
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
-    # zbUtil.mean_20_filter()
+    zbUtil.mean_20_filter()
     zbUtil.guaidian_filter()
