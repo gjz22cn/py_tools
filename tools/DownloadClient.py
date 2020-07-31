@@ -221,7 +221,7 @@ class DownloadClient:
 
         self.sleep_cnt += 1
         if self.sleep_cnt%5 == 0:
-            time.sleep(1)
+            time.sleep(0.1)
 
         last_datetime = datetime.datetime.strptime(str(last_date), "%Y%m%d")
         delta = datetime.timedelta(days=1)
