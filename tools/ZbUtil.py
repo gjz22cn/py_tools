@@ -27,6 +27,7 @@ class ZbUtil:
         self.zb_dir = os.path.join(self.root_dir, 'zb')
         self.stUtil = StUtil(self.root_dir)
         self.calc_date = 'unknown'
+        self.eva = [[0, 0] for i in range(20)]
 
     def set_calc_date(self, calc_date):
         self.calc_date = calc_date
@@ -175,6 +176,15 @@ class ZbUtil:
         if v_20[17] < v_20[16]:
             return False
 
+        if v_20[19] > m_20[19]:
+            return True
+        else:
+            delta = m_20[19] - v_20[19]
+            if (delta * 20) < m_20[19]:
+                return True
+            else:
+                return False
+
         return True
 
     @staticmethod
@@ -306,7 +316,7 @@ class ZbUtil:
         if df is None:
             return False
 
-        df = df[-360:].reset_index()
+        df = df[-180:].reset_index()
         v = np.array(df['close'].values)
 
         len_v = len(v)
@@ -329,10 +339,10 @@ class ZbUtil:
         if bottom_idx[0][bottom_idx_len - 1] > top_idx[0][top_idx_len - 1]:
             return False
 
-        if top_idx[0][top_idx_len - 1] - bottom_idx[0][bottom_idx_len - 1] > 2:
+        if top_idx[0][top_idx_len - 1] - bottom_idx[0][bottom_idx_len - 1] < 2:
             return False
 
-        if bottom_idx[0][bottom_idx_len - 1] - top_idx[0][top_idx_len - 2] < 3:
+        if bottom_idx[0][bottom_idx_len - 1] - top_idx[0][top_idx_len - 2] < 5:
             return False
 
         if v[bottom_idx[0][bottom_idx_len - 1]] < v[bottom_idx[0][bottom_idx_len - 2]]:
@@ -363,12 +373,112 @@ class ZbUtil:
         df_out = pd.DataFrame({'guaidian': result})
         df_out.to_csv(file_out, mode='w', index=False, encoding="utf_8_sig")
 
+    def mean_guandian_one_stock(self, ts_code, days, ch):
+        st_code = ts_code.split('.')[0]
+        file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
+
+        # cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
+        cols = ['trade_date', 'close', 'vol', 'amount']
+        df = pd.read_csv(file_stock, header=0, usecols=cols, dtype={'trade_date': str}, encoding='utf-8')
+
+        if df is None:
+            return False
+
+        if df.shape[0] < (360+days):
+            #print "%s's data is wrong %d" % (ts_code, df.shape[0])
+            return False
+
+        df1 = df['close'][-360-days:].reset_index()
+
+        v_a = df1['close'][-361:].values
+        max_idx = len(v_a)
+        m_a = []
+        for i in range(180):
+            m_a.append(df1['close'][i:i+days].mean())
+
+        v = np.array(m_a)
+
+        #print
+        #index = signal.argrelextrema(v, np.less_equal)
+
+        top_idx = signal.argrelextrema(v, np.greater_equal)
+        bottom_idx = signal.argrelextrema(v, np.less_equal)
+
+        top_idx_len = len(top_idx[0])
+        bottom_idx_len = len(bottom_idx[0])
+
+        if ch == 0:
+            if bottom_idx[0][bottom_idx_len - 1] > top_idx[0][top_idx_len - 1]:
+                return False
+
+            up_days = top_idx[0][top_idx_len - 1] - bottom_idx[0][bottom_idx_len - 1]
+            d_days = days/10
+            if (up_days < d_days) or (up_days > d_days + 2):
+                return False
+        else:
+            stock_eva = [[0, 0] for i in range(20)]
+            for idx in bottom_idx[0]:
+                for i in range(1, 20):
+                    if (idx + i) < max_idx:
+                        v_n = v_a[idx+i]
+                        if v_n > v_a[idx] * 1.05:
+                            self.eva[i][0] += 1
+                            stock_eva[i][0] += 1
+                        else:
+                            self.eva[i][1] += 1
+                            stock_eva[i][1] += 1
+
+            tmp_i = 1
+            for eva1 in stock_eva:
+                if eva1[0] > eva1[1]:
+                    v = float(eva1[0]) / float(eva1[0] + eva1[1]) * 100
+                    if v > 80:
+                        print ts_code, tmp_i, "%.1f%%" % v
+                tmp_i += 1
+
+        return True
+
+    def mean_guaidian_filter(self, days, ch):
+        print "\n---%d---" % days
+        for eva in self.eva:
+            eva[0] = 0
+            eva[1] = 0
+        result = []
+        stocks = self.stUtil.get_all_stocks(type)
+        for stock in stocks:
+            if self.mean_guandian_one_stock(stock, days, ch):
+                result.append(stock)
+
+        if ch:
+            i = 1
+            for eva in self.eva:
+                if (eva[0] + eva[1]) > 0:
+                    v = float(eva[0]) / float(eva[0] + eva[1]) * 100
+                    if v > 20:
+                        print i, "%.1f%%" % v
+                i += 1
+            return
+
+        file_out = os.path.join(self.zb_dir, 'guaidian_' + self.calc_date + '.csv')
+        df_out = pd.DataFrame({'guaidian': result})
+        df_out.to_csv(file_out, mode='w', index=False, encoding="utf_8_sig")
+
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
-    zbUtil.set_calc_date('20200731')
+    zbUtil.set_calc_date('20200824')
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
     # zbUtil.mean_20_filter()
     zbUtil.mean_filter(100)
-    #zbUtil.guaidian_filter()
+
+    #zbUtil.mean_guaidian_filter(10, 1)
+    #zbUtil.mean_guaidian_filter(20, 1)
+    #zbUtil.mean_guaidian_filter(30, 1)
+    #zbUtil.mean_guaidian_filter(40, 1)
+    #zbUtil.mean_guaidian_filter(50, 1)
+    #zbUtil.mean_guaidian_filter(60, 1)
+
+
+
+
