@@ -28,6 +28,7 @@ class ZbUtil:
         self.stUtil = StUtil(self.root_dir)
         self.calc_date = 'unknown'
         self.eva = [[0, 0] for i in range(20)]
+        self.stock_list = []
 
     def set_calc_date(self, calc_date):
         self.calc_date = calc_date
@@ -373,6 +374,14 @@ class ZbUtil:
         df_out = pd.DataFrame({'guaidian': result})
         df_out.to_csv(file_out, mode='w', index=False, encoding="utf_8_sig")
 
+    def guaidian_stock_append(self, df):
+        need_header = False
+        file_out = os.path.join(self.root_dir, 'guaidian_stock.csv')
+        if not os.path.exists(file_out):
+            need_header = True
+        cols = ['days', 'ts_code', 'e_days', 'percent', 'cnt_points']
+        df.to_csv(file_out, columns=cols, mode='a', header=need_header, encoding="utf_8_sig")
+
     def mean_guandian_one_stock(self, ts_code, days, ch):
         st_code = ts_code.split('.')[0]
         file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
@@ -417,6 +426,7 @@ class ZbUtil:
                 return False
         else:
             stock_eva = [[0, 0] for i in range(20)]
+            eva_cnts = len(bottom_idx[0])
             for idx in bottom_idx[0]:
                 for i in range(1, 20):
                     if (idx + i) < max_idx:
@@ -428,13 +438,24 @@ class ZbUtil:
                             self.eva[i][1] += 1
                             stock_eva[i][1] += 1
 
+            record = 0
             tmp_i = 1
             for eva1 in stock_eva:
                 if eva1[0] > eva1[1]:
                     v = float(eva1[0]) / float(eva1[0] + eva1[1]) * 100
                     if v > 80:
+                        record = 1
                         print ts_code, tmp_i, "%.1f%%" % v
+                        self.guaidian_stock_append(pd.DataFrame({
+                            'days': [days],
+                            'ts_code': [ts_code],
+                            'e_days': [tmp_i],
+                            'percent': [v],
+                            'cnt_points': [eva_cnts]}))
                 tmp_i += 1
+
+            if record == 1:
+                self.stock_list.append(ts_code)
 
         return True
 
@@ -457,11 +478,35 @@ class ZbUtil:
                     if v > 20:
                         print i, "%.1f%%" % v
                 i += 1
+
+            print self.stock_list
             return
 
         file_out = os.path.join(self.zb_dir, 'guaidian_' + self.calc_date + '.csv')
         df_out = pd.DataFrame({'guaidian': result})
         df_out.to_csv(file_out, mode='w', index=False, encoding="utf_8_sig")
+
+    def get_all_guaidian_stocks(self):
+        file_in = os.path.join(self.root_dir, 'guaidian_stock.csv')
+        if not os.path.exists(file_in):
+            return []
+
+        df = pd.read_csv(file_in, header=0, usecols=['ts_code'], encoding='utf-8')
+        l1 = df.values.flatten()
+
+        return list(set(l1))
+
+    def mean_guaidian_calc(self):
+        file_out = os.path.join(self.root_dir, 'guaidian_stock.csv')
+        if os.path.exists(file_out):
+            os.remove(file_out)
+        self.mean_guaidian_filter(10, 1)
+        return
+        self.mean_guaidian_filter(20, 1)
+        self.mean_guaidian_filter(30, 1)
+        self.mean_guaidian_filter(40, 1)
+        self.mean_guaidian_filter(50, 1)
+        self.mean_guaidian_filter(60, 1)
 
 
 if __name__ == '__main__':
@@ -470,14 +515,11 @@ if __name__ == '__main__':
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
     # zbUtil.mean_20_filter()
-    zbUtil.mean_filter(100)
+    #zbUtil.mean_filter(100)
+    #zbUtil.mean_guaidian_calc()
+    zbUtil.get_all_guaidian_stocks()
 
-    #zbUtil.mean_guaidian_filter(10, 1)
-    #zbUtil.mean_guaidian_filter(20, 1)
-    #zbUtil.mean_guaidian_filter(30, 1)
-    #zbUtil.mean_guaidian_filter(40, 1)
-    #zbUtil.mean_guaidian_filter(50, 1)
-    #zbUtil.mean_guaidian_filter(60, 1)
+
 
 
 
