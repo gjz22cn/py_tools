@@ -286,7 +286,7 @@ class ZbUtil:
 
     def mean_filter(self, days):
         result = [list(), list()]
-        stocks = self.stUtil.get_all_stocks(type)
+        stocks = self.stUtil.get_all_stocks(3)
         for stock in stocks:
             self.mean_filter_one_stock_new(result, stock, 100)
 
@@ -397,12 +397,12 @@ class ZbUtil:
             #print "%s's data is wrong %d" % (ts_code, df.shape[0])
             return False
 
-        df1 = df['close'][-360-days:].reset_index()
+        df1 = df['close'][-360-days+1:].reset_index()
 
         v_a = df1['close'][-361:].values
         max_idx = len(v_a)
         m_a = []
-        for i in range(180):
+        for i in range(360):
             m_a.append(df1['close'][i:i+days].mean())
 
         v = np.array(m_a)
@@ -457,6 +457,14 @@ class ZbUtil:
             if record == 1:
                 self.stock_list.append(ts_code)
 
+        '''
+        print ts_code, up_days, d_days
+        print m_a[-7:]
+        print v_a[-7:]
+        print bottom_idx[0][-5:]
+        print top_idx[0][-5:]
+        '''
+
         return True
 
     def mean_guaidian_filter(self, days, ch):
@@ -508,16 +516,68 @@ class ZbUtil:
         self.mean_guaidian_filter(50, 1)
         self.mean_guaidian_filter(60, 1)
 
+    def below_days_mean(self, ts_code, days):
+        st_code = ts_code.split('.')[0]
+        file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
+
+        # cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
+        cols = ['trade_date', 'close', 'vol', 'amount']
+        df = pd.read_csv(file_stock, header=0, usecols=cols, dtype={'trade_date': str}, encoding='utf-8')
+
+        if df is None:
+            return False
+
+        if df.shape[0] < (19 + days):
+            print "%s's data is wrong %d" % (ts_code, df.shape[0])
+            return False
+
+        df1 = df['close'][-19 - days:].reset_index()
+
+        v_a = df1['close'][-20:].values
+        m_a = []
+        for i in range(20):
+            m_a.append(df1['close'][i:i + days].mean())
+
+        if v_a[19] > m_a[19]:
+            return False
+
+        if v_a[18] > m_a[18]:
+            return False
+
+        if v_a[17] > m_a[17]:
+            return False
+
+        return True
+
+    def below_days_mean_and_guandian(self, mean_days, guaidian_days):
+        result = []
+        result_2 = []
+        stocks = self.stUtil.get_all_stocks(3)
+        #i = 0
+        for stock in stocks:
+            if self.mean_guandian_one_stock(stock, guaidian_days, 0):
+                result.append(stock)
+                #i += 1
+                #if i > 6:
+                #    return
+
+        for stock in result:
+            if self.below_days_mean(stock, mean_days):
+                result_2.append(stock)
+
+        print result_2
+
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
-    zbUtil.set_calc_date('20200824')
+    zbUtil.set_calc_date('20200911')
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
     # zbUtil.mean_20_filter()
     #zbUtil.mean_filter(100)
     #zbUtil.mean_guaidian_calc()
-    zbUtil.get_all_guaidian_stocks()
+    #zbUtil.get_all_guaidian_stocks()
+    zbUtil.below_days_mean_and_guandian(100, 20)
 
 
 
