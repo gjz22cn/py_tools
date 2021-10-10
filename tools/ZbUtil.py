@@ -567,17 +567,71 @@ class ZbUtil:
 
         print result_2
 
+    def calc_mean(self, m_r, ts_code, days, num):
+        st_code = ts_code.split('.')[0]
+        file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
+
+        # cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
+        cols = ['trade_date', 'close', 'vol', 'amount']
+        df = pd.read_csv(file_stock, header=0, usecols=cols, dtype={'trade_date': str}, encoding='utf-8')
+
+        if df is None:
+            return False
+
+        if df.shape[0] < ((num-1)+days):
+            print "%s's data is wrong %d" % (ts_code, df.shape[0])
+            return False
+
+        df1 = df['close'][0-(num-1)-days:].reset_index()
+
+        for i in range(num):
+            m_r.append(df1['close'][i:i+days].mean())
+
+        return True
+
+    def mean_20_exceed_mean_100_one_stock(self, ts_code):
+        eval_days = 30
+        m_20 = []
+        m_100 = []
+
+        if self.calc_mean(m_20, ts_code, 20, eval_days) is False:
+            return False
+
+        if self.calc_mean(m_100, ts_code, 100, eval_days) is False:
+            return False
+
+        if m_100[eval_days-1] > m_20[eval_days-1]:
+            return False
+
+        for i in range(eval_days-1):
+            if m_20[i] > m_100[i]:
+                return False
+
+        return True
+
+    def mean_20_exceed_mean_100(self):
+        f_r = []
+        stocks = self.stUtil.get_all_stocks(3)
+        for stock in stocks:
+            if self.mean_20_exceed_mean_100_one_stock(stock):
+                f_r.append(stock)
+
+        print f_r
+
+
+
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
-    zbUtil.set_calc_date('20200911')
+    zbUtil.set_calc_date('20211009')
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
-    # zbUtil.mean_20_filter()
+    #zbUtil.mean_20_filter()
     #zbUtil.mean_filter(100)
     #zbUtil.mean_guaidian_calc()
     #zbUtil.get_all_guaidian_stocks()
-    zbUtil.below_days_mean_and_guandian(100, 20)
+    #zbUtil.below_days_mean_and_guandian(100, 20)
+    zbUtil.mean_20_exceed_mean_100()
 
 
 

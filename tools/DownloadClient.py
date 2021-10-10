@@ -206,6 +206,14 @@ class DownloadClient:
         st_code = ts_code.split('.')[0]
         file = os.path.join(self.stocks_dir, st_code+'.csv')
         cols = ['trade_date']
+        if not os.path.exists(file):
+            df = self.pro.daily(ts_code=ts_code, start_date=self.start_date, end_date=skip_date)
+            columns = ['ts_code', 'trade_date', 'open', 'high', 'low', 'close', 'pre_close', 'change', 'pct_chg', 'vol',
+                       'amount']
+            df = df.sort_values(by='trade_date', ascending=True)
+            df.to_csv(file, columns=columns, mode='w', header=True, encoding="utf_8_sig")
+            return
+
         df = pd.read_csv(file, header=0, usecols=cols, encoding='utf-8')
         if df is None:
             return
@@ -221,7 +229,7 @@ class DownloadClient:
 
         self.sleep_cnt += 1
         if self.sleep_cnt%5 == 0:
-            time.sleep(0.1)
+            time.sleep(0.2)
 
         last_datetime = datetime.datetime.strptime(str(last_date), "%Y%m%d")
         delta = datetime.timedelta(days=1)
