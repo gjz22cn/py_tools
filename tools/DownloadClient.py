@@ -16,7 +16,7 @@ class DownloadClient:
         self.zhishus_dir = os.path.join(self.root_dir, 'zhishus')
         self.dataDir = '../stocks'
         ts.set_token('b1de6890364825a4b7b2d227b64c09a486239daf67451c5638404c62')
-        self.pro = ts.pro_api()
+        self.pro = ts.pro_api('b1de6890364825a4b7b2d227b64c09a486239daf67451c5638404c62', 1)
         self.start_date = '20190101'
         self.end_date = '20181231'
         self.sleep_cnt = 0
@@ -228,19 +228,23 @@ class DownloadClient:
                 return
 
         self.sleep_cnt += 1
-        if self.sleep_cnt%5 == 0:
-            time.sleep(0.2)
+        #if self.sleep_cnt%5 == 0:
+        #    time.sleep(0.2)
 
         last_datetime = datetime.datetime.strptime(str(last_date), "%Y%m%d")
         delta = datetime.timedelta(days=1)
         start_datetime = last_datetime + delta
         start_date = start_datetime.strftime('%Y%m%d')
         today = datetime.datetime.now().strftime('%Y%m%d')
-        df_new = self.pro.daily(ts_code=ts_code, start_date=start_date, end_date=today)
-        columns = ['ts_code', 'trade_date', 'open', 'high', 'low', 'close', 'pre_close', 'change', 'pct_chg', 'vol',
+        try:
+            df_new = self.pro.daily(ts_code=ts_code, start_date=start_date, end_date=today)
+        except IOError:
+            return
+        else:
+            columns = ['ts_code', 'trade_date', 'open', 'high', 'low', 'close', 'pre_close', 'change', 'pct_chg', 'vol',
                    'amount']
-        df_new = df_new.sort_values(by='trade_date', ascending=True)
-        df_new.to_csv(file, columns=columns, mode='a', header=False, encoding="utf_8_sig")
+            df_new = df_new.sort_values(by='trade_date', ascending=True)
+            df_new.to_csv(file, columns=columns, mode='a', header=False, encoding="utf_8_sig")
 
     def get_wk_data_for_stock(self, ts_code, skip_date):
         st_code = ts_code.split('.')[0]

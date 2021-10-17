@@ -623,7 +623,7 @@ class ZbUtil:
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
-    zbUtil.set_calc_date('20211009')
+    zbUtil.set_calc_date('20211015')
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
     #zbUtil.mean_20_filter()
