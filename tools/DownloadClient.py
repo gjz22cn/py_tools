@@ -25,7 +25,7 @@ class DownloadClient:
                             '399006.SZ', '399016.SZ']
 
     # 查询当前所有正常上市交易的股票列表
-    def getStockList(self):
+    def getStockList(self, filename='stock_list.csv'):
         '''
         名称        类型    描述
         ts_code	    str	    TS代码
@@ -46,7 +46,7 @@ class DownloadClient:
         # colunms 保存指定的列索引
         stockList = self.pro.stock_basic(exchange='', list_status='L',
                                          fields='ts_code,symbol,name,area,industry,fullname,enname,market,exchange,curr_type,list_status,list_date,delist_date,is_hs')
-        stockList.to_csv(os.path.join(self.dataDir, 'stock_list.csv'),
+        stockList.to_csv(os.path.join(self.dataDir, filename),
                          columns=['ts_code', 'symbol', 'name', 'area', 'industry', 'fullname', 'enname', 'market',
                                   'exchange',
                                   'curr_type', 'list_status', 'list_date', 'delist_date', 'is_hs'],
@@ -238,8 +238,8 @@ class DownloadClient:
         today = datetime.datetime.now().strftime('%Y%m%d')
         try:
             df_new = self.pro.daily(ts_code=ts_code, start_date=start_date, end_date=today)
-        except IOError:
-            return
+        except:
+            print "error " + ts_code
         else:
             columns = ['ts_code', 'trade_date', 'open', 'high', 'low', 'close', 'pre_close', 'change', 'pct_chg', 'vol',
                    'amount']

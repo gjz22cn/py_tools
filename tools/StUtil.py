@@ -6,6 +6,7 @@ from DownloadClient import DownloadClient
 import time
 import datetime
 
+
 class StUtil:
     def __init__(self, dir):
         self.root_dir = dir
@@ -21,12 +22,12 @@ class StUtil:
         self.downloadClient = DownloadClient()
         self.step_len = 10
 
-    def get_all_stocks(self, type):
-        file = os.path.join(self.root_dir, 'stock_list.csv')
-        if not os.path.exists(file):
+    def get_all_stocks(self, type, filename='stock_list.csv'):
+        file_path = os.path.join(self.root_dir, filename)
+        if not os.path.exists(file_path):
             return []
 
-        data = pd.read_csv(file, header=0, usecols=['ts_code'], encoding='utf-8')
+        data = pd.read_csv(file_path, header=0, usecols=['ts_code'], encoding='utf-8')
         data = data.values.flatten()
 
         output = []
@@ -41,5 +42,15 @@ class StUtil:
                 output.append(v)
         else:
             output = data
+
+        return output
+
+    def get_all_stocks_by_filename(self, filename='stock_list_tmp.csv'):
+        file_path = os.path.join(self.root_dir, filename)
+        if not os.path.exists(file_path):
+            return []
+
+        data = pd.read_csv(file_path, header=0, usecols=['ts_code'], encoding='utf-8')
+        output = data.values.flatten()
 
         return output

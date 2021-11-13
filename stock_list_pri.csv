@@ -1,0 +1,415 @@
+﻿Unnamed: 0,ts_code,symbol,name,area,industry,fullname,enname,market,exchange,curr_type,list_status,list_date,delist_date,is_hs
+0,000001.SZ,1,平安银行,深圳,银行,平安银行股份有限公司,"Ping An Bank Co., Ltd.",主板,SZSE,CNY,L,19910403,,S
+4,000006.SZ,6,深振业A,深圳,区域地产,深圳市振业(集团)股份有限公司,"Shenzhen Zhenye(Group) Co.,Ltd.",主板,SZSE,CNY,L,19920427,,S
+7,000009.SZ,9,中国宝安,深圳,电气设备,中国宝安集团股份有限公司,"China Baoan Group Co.,Ltd.",主板,SZSE,CNY,L,19910625,,S
+9,000011.SZ,11,深物业A,深圳,区域地产,深圳市物业发展(集团)股份有限公司,Shenzhen Properties & Resources Development (Group) Ltd.,主板,SZSE,CNY,L,19920330,,S
+10,000012.SZ,12,南玻A,深圳,玻璃,中国南玻集团股份有限公司,"CSG Holding Co.,Ltd.",主板,SZSE,CNY,L,19920228,,S
+14,000019.SZ,19,深粮控股,深圳,其他商业,深圳市深粮控股股份有限公司,"Shenzhen Cereals Holdings Co.,Ltd.",主板,SZSE,CNY,L,19921012,,S
+16,000021.SZ,21,深科技,深圳,IT设备,深圳长城开发科技股份有限公司,"Shenzhen Kaifa Technology Co., Ltd.",主板,SZSE,CNY,L,19940202,,S
+18,000025.SZ,25,特力A,深圳,汽车服务,深圳市特力(集团)股份有限公司,"Shenzhen Tellus Holding Co.,Ltd",主板,SZSE,CNY,L,19930621,,S
+19,000026.SZ,26,飞亚达,深圳,其他商业,飞亚达精密科技股份有限公司,"Fiyta Precision Technology Co., Ltd.",主板,SZSE,CNY,L,19930603,,N
+21,000028.SZ,28,国药一致,深圳,医药商业,国药集团一致药业股份有限公司,China National Accord Medicines Corporation Ltd.,主板,SZSE,CNY,L,19930809,,S
+22,000029.SZ,29,深深房A,深圳,区域地产,深圳经济特区房地产(集团)股份有限公司,"Shenzhen Special Economic Zone Real Estate&Properties (Group).Co.,Ltd.",主板,SZSE,CNY,L,19930915,,S
+23,000030.SZ,30,富奥股份,吉林,汽车配件,富奥汽车零部件股份有限公司,Fawer Automotive Parts Limited Company,主板,SZSE,CNY,L,19930929,,S
+28,000036.SZ,36,华联控股,深圳,全国地产,华联控股股份有限公司,China Union Holdings Ltd.,主板,SZSE,CNY,L,19940617,,N
+31,000039.SZ,39,中集集团,深圳,轻工机械,中国国际海运集装箱(集团)股份有限公司,"China International Marine Containers (Group) Co., Ltd",主板,SZSE,CNY,L,19940408,,S
+36,000048.SZ,48,京基智农,深圳,饲料,深圳市京基智农时代股份有限公司,"Shenzhen Kingkey Smart Agriculture Times Co.,Ltd",主板,SZSE,CNY,L,19941101,,S
+37,000049.SZ,49,德赛电池,深圳,电气设备,深圳市德赛电池科技股份有限公司,"Shenzhen Desay Battery Technology Co., Ltd.",主板,SZSE,CNY,L,19950320,,S
+42,000059.SZ,59,华锦股份,辽宁,石油加工,北方华锦化学工业股份有限公司,"North Huajin Chemical Industries Co.,Ltd",主板,SZSE,CNY,L,19970130,,S
+43,000060.SZ,60,中金岭南,深圳,铅锌,深圳市中金岭南有色金属股份有限公司,Shenzhen Zhongjin Lingnan Nonfemet Co. Ltd.,主板,SZSE,CNY,L,19970123,,S
+45,000062.SZ,62,深圳华强,深圳,批发业,深圳华强实业股份有限公司,"Shenzhen Huaqiang Industry Co.,Ltd",主板,SZSE,CNY,L,19970130,,S
+46,000063.SZ,63,中兴通讯,深圳,通信设备,中兴通讯股份有限公司,ZTE Corporation,主板,SZSE,CNY,L,19971118,,S
+55,000090.SZ,90,天健集团,深圳,建筑工程,深圳市天健(集团)股份有限公司,"Shenzhen Tagen Group Co., Ltd.",主板,SZSE,CNY,L,19990721,,S
+57,000099.SZ,99,中信海直,深圳,空运,中信海洋直升机股份有限公司,"Citic Offshore Helicopter Co., Ltd.",主板,SZSE,CNY,L,20000731,,N
+58,000100.SZ,100,TCL科技,广东,元器件,TCL科技集团股份有限公司,TCL Technology Group Corporation,主板,SZSE,CNY,L,20040130,,S
+62,000155.SZ,155,川能动力,四川,新型电力,四川省新能源动力股份有限公司,Sichuan New Energypower Company Limited,主板,SZSE,CNY,L,20000926,,S
+64,000157.SZ,157,中联重科,湖南,工程机械,中联重科股份有限公司,"Zoomlion Heavy Industry Science and Technology Co., Ltd.",主板,SZSE,CNY,L,20001012,,S
+67,000166.SZ,166,申万宏源,新疆,证券,申万宏源集团股份有限公司,"Shenwan Hongyuan Group Co.,Ltd.",主板,SZSE,CNY,L,20150126,,S
+68,000301.SZ,301,东方盛虹,江苏,化纤,江苏东方盛虹股份有限公司,"Jiangsu Eastern Shenghong Co.,Ltd.",主板,SZSE,CNY,L,20000529,,S
+69,000333.SZ,333,美的集团,广东,家用电器,美的集团股份有限公司,"Midea Group Co.,Ltd.",主板,SZSE,CNY,L,20130918,,S
+70,000338.SZ,338,潍柴动力,山东,汽车配件,潍柴动力股份有限公司,"Weichai Power Co.,Ltd.",主板,SZSE,CNY,L,20070430,,S
+74,000403.SZ,403,派林生物,山西,生物制药,派斯双林生物制药股份有限公司,"Pacific Shuanglin Bio-pharmacy Co., LTD",主板,SZSE,CNY,L,19960628,,S
+76,000407.SZ,407,胜利股份,山东,供气供热,山东胜利股份有限公司,"Shandong Shengli Co.,Ltd.",主板,SZSE,CNY,L,19960703,,N
+77,000408.SZ,408,藏格控股,青海,农药化肥,藏格控股股份有限公司,Zangge Holding Company Limited,主板,SZSE,CNY,L,19960628,,N
+80,000411.SZ,411,英特集团,浙江,医药商业,浙江英特集团股份有限公司,"Zhejiang Int'l Group Co.,Ltd",主板,SZSE,CNY,L,19960716,,N
+84,000417.SZ,417,合肥百货,安徽,百货,合肥百货大楼集团股份有限公司,"Hefei Department Store Group Co.,Ltd",主板,SZSE,CNY,L,19960812,,N
+88,000422.SZ,422,湖北宜化,湖北,农药化肥,湖北宜化化工股份有限公司,"Hubei Yihua Chemical Industry Co.,Ltd",主板,SZSE,CNY,L,19960815,,N
+90,000425.SZ,425,徐工机械,江苏,工程机械,徐工集团工程机械股份有限公司,"XCMG Construction Machinery Co., Ltd.",主板,SZSE,CNY,L,19960828,,S
+91,000426.SZ,426,兴业矿业,内蒙,铅锌,内蒙古兴业矿业股份有限公司,"Inner Mongolia Xingye Mining Co.,Ltd",主板,SZSE,CNY,L,19960828,,S
+93,000429.SZ,429,粤高速A,广东,路桥,广东省高速公路发展股份有限公司,"Guangdong Provincial Expressway Development Co.,Ltd.",主板,SZSE,CNY,L,19980220,,S
+95,000488.SZ,488,晨鸣纸业,山东,造纸,山东晨鸣纸业集团股份有限公司,Shandong Chenming Paper Holdings Limited,主板,SZSE,CNY,L,20001120,,S
+96,000498.SZ,498,山东路桥,山东,建筑工程,山东高速路桥集团股份有限公司,"Shandong Hi-Speed Road&Bridge Group Co.,Ltd.",主板,SZSE,CNY,L,19970609,,S
+97,000501.SZ,501,鄂武商A,湖北,百货,武汉武商集团股份有限公司,"Wuhan Department Store Group Co., Ltd.",主板,SZSE,CNY,L,19921120,,S
+101,000505.SZ,505,京粮控股,海南,食品,海南京粮控股股份有限公司,"Hainan Jingliang Holdings Co., Ltd.",主板,SZSE,CNY,L,19921221,,N
+105,000510.SZ,510,新金路,四川,化工原料,四川新金路集团股份有限公司,"Sichuan Xinjinlu Group Co.,Ltd",主板,SZSE,CNY,L,19930507,,N
+106,000513.SZ,513,丽珠集团,广东,化学制药,丽珠医药集团股份有限公司,Livzon Pharmaceutical Group Inc.,主板,SZSE,CNY,L,19931028,,S
+111,000519.SZ,519,中兵红箭,湖南,专用机械,中兵红箭股份有限公司,"North Industries Group Red Arrow Co., Ltd",主板,SZSE,CNY,L,19931008,,S
+112,000520.SZ,520,长航凤凰,湖北,水运,长航凤凰股份有限公司,"Chang Jiang Shipping Group Phoenix Co.,Ltd",主板,SZSE,CNY,L,19931025,,N
+118,000528.SZ,528,柳工,广西,工程机械,广西柳工机械股份有限公司,"Guangxi Liugong Machinery Co.,Ltd.",主板,SZSE,CNY,L,19931118,,S
+119,000529.SZ,529,广弘控股,广东,食品,广东广弘控股股份有限公司,"Guangdong Guanghong Holdings Co.,Ltd.",主板,SZSE,CNY,L,19931118,,N
+121,000531.SZ,531,穗恒运A,广东,火力发电,广州恒运企业集团股份有限公司,Guangzhou Hengyun Enterprises Holding Ltd,主板,SZSE,CNY,L,19940106,,N
+124,000534.SZ,534,万泽股份,广东,生物制药,万泽实业股份有限公司,"Wedge Industrial Co.,Ltd.",主板,SZSE,CNY,L,19940110,,N
+126,000537.SZ,537,广宇发展,天津,区域地产,天津广宇发展股份有限公司,"Tianjin Guangyu Development Co., Ltd.",主板,SZSE,CNY,L,19931210,,S
+132,000544.SZ,544,中原环保,河南,环境保护,中原环保股份有限公司,"Central Plains Environment Protection Co.,Ltd",主板,SZSE,CNY,L,19931208,,S
+134,000546.SZ,546,金圆股份,吉林,环境保护,金圆环保股份有限公司,"Jinyuan Ep Co.,Ltd",主板,SZSE,CNY,L,19931215,,N
+135,000547.SZ,547,航天发展,福建,通信设备,航天工业发展股份有限公司,"Addsino Co.,Ltd.",主板,SZSE,CNY,L,19931130,,S
+137,000550.SZ,550,江铃汽车,江西,汽车整车,江铃汽车股份有限公司,"Jiangling Motors Corporation, Ltd.",主板,SZSE,CNY,L,19931201,,S
+139,000552.SZ,552,靖远煤电,甘肃,煤炭开采,甘肃靖远煤电股份有限公司,"Gansu Jingyuan Coal Industry and Electricity Power Co.,Ltd",主板,SZSE,CNY,L,19940106,,N
+150,000565.SZ,565,渝三峡A,重庆,染料涂料,重庆三峡油漆股份有限公司,"Chongqing Sanxia Paints Co.,Ltd.",主板,SZSE,CNY,L,19940408,,N
+153,000568.SZ,568,泸州老窖,四川,白酒,泸州老窖股份有限公司,"Luzhou Laojiao Co.,Ltd",主板,SZSE,CNY,L,19940509,,S
+157,000573.SZ,573,粤宏远A,广东,区域地产,东莞宏远工业区股份有限公司,DongGuan Winnerway Industry Zone LTD.,主板,SZSE,CNY,L,19940815,,N
+158,000576.SZ,576,甘化科工,广东,食品,广东甘化科工股份有限公司,"Guangdong Ganhua Science & Industry Co., Ltd.",主板,SZSE,CNY,L,19940907,,N
+159,000581.SZ,581,威孚高科,江苏,汽车配件,无锡威孚高科技集团股份有限公司,"Weifu High-Technology Group Co.,Ltd.",主板,SZSE,CNY,L,19980924,,S
+160,000582.SZ,582,北部湾港,广西,港口,北部湾港股份有限公司,"Beibu Gulf Port Co., Ltd.",主板,SZSE,CNY,L,19951102,,S
+163,000586.SZ,586,汇源通信,四川,通信设备,四川汇源光通信股份有限公司,"Sichuan Huiyuan Optical Communications Co.,Ltd.",主板,SZSE,CNY,L,19951220,,N
+165,000589.SZ,589,贵州轮胎,贵州,汽车配件,贵州轮胎股份有限公司,"Guizhou Tyre Co.,Ltd.",主板,SZSE,CNY,L,19960308,,N
+166,000590.SZ,590,启迪药业,湖南,中成药,启迪药业集团股份公司,"Tus-Pharmaceutical Group Co., Ltd.",主板,SZSE,CNY,L,19960119,,N
+167,000591.SZ,591,太阳能,重庆,新型电力,中节能太阳能股份有限公司,"CECEP Solar Energy Co.,Ltd.",主板,SZSE,CNY,L,19960208,,S
+171,000596.SZ,596,古井贡酒,安徽,白酒,安徽古井贡酒股份有限公司,Anhui Gujing Distillery Company Limited,主板,SZSE,CNY,L,19960927,,S
+173,000598.SZ,598,兴蓉环境,四川,水务,成都市兴蓉环境股份有限公司,"Chengdu Xingrong Environment Co., Ltd.",主板,SZSE,CNY,L,19960529,,S
+179,000606.SZ,606,ST顺利,青海,互联网,顺利办信息服务股份有限公司,"Shunliban Information Service Co., Ltd",主板,SZSE,CNY,L,19961004,,N
+185,000612.SZ,612,焦作万方,河南,铝,焦作万方铝业股份有限公司,"Jiaozuo Wanfang Aluminum Manufacturing Co.,Ltd.",主板,SZSE,CNY,L,19960926,,S
+186,000613.SZ,613,*ST东海A,海南,旅游服务,海南大东海旅游中心股份有限公司,"Hainan Dadonghai Tourism Centre (Holdings) Co.,Ltd",主板,SZSE,CNY,L,19970128,,N
+195,000626.SZ,626,远大控股,江苏,商贸代理,远大产业控股股份有限公司,"Grand Industrial Holding Co., Ltd",主板,SZSE,CNY,L,19961128,,N
+197,000628.SZ,628,高新发展,四川,园区开发,成都高新发展股份有限公司,"Chengdu Hi-Tech Development Co., Ltd.",主板,SZSE,CNY,L,19961118,,N
+203,000635.SZ,635,英力特,宁夏,化工原料,宁夏英力特化工股份有限公司,"Ningxia Younglight Chemicals Co.,Ltd",主板,SZSE,CNY,L,19961120,,N
+204,000636.SZ,636,风华高科,广东,元器件,广东风华高新科技股份有限公司,"Guangdong Fenghua Advanced Technology(Holding) Co.,Ltd",主板,SZSE,CNY,L,19961129,,N
+206,000638.SZ,638,*ST万方,吉林,软件服务,万方城镇投资发展股份有限公司,"Vanfund Urban Investment&Development Co.,Ltd.",主板,SZSE,CNY,L,19961126,,N
+207,000639.SZ,639,西王食品,山东,食品,西王食品股份有限公司,"Xiwang Foodstuffs Co., Ltd.",主板,SZSE,CNY,L,19961126,,S
+208,000650.SZ,650,仁和药业,江西,中成药,仁和药业股份有限公司,"Renhe Pharmacy Co.,Ltd",主板,SZSE,CNY,L,19961210,,S
+209,000651.SZ,651,格力电器,广东,家用电器,珠海格力电器股份有限公司,"Gree Electric Appliances,Inc. of Zhuhai",主板,SZSE,CNY,L,19961118,,S
+211,000655.SZ,655,金岭矿业,山东,普钢,山东金岭矿业股份有限公司,"Shandong Jinling Mining Co., Ltd.",主板,SZSE,CNY,L,19961128,,N
+215,000661.SZ,661,长春高新,吉林,生物制药,长春高新技术产业(集团)股份有限公司,"Changchun High-tech Industry (Group) Co., Ltd.",主板,SZSE,CNY,L,19961218,,S
+216,000663.SZ,663,永安林业,福建,林业,福建省永安林业(集团)股份有限公司,"Fujian Yongan Forestry(Group) Joint-Stock Co.,Ltd.",主板,SZSE,CNY,L,19961206,,N
+218,000666.SZ,666,经纬纺机,北京,多元金融,经纬纺织机械股份有限公司,Jingwei Textile Machinery Company Limited,主板,SZSE,CNY,L,19961210,,N
+223,000672.SZ,672,上峰水泥,甘肃,水泥,甘肃上峰水泥股份有限公司,"Gansu Shangfeng Cement Co., Ltd",主板,SZSE,CNY,L,19961218,,S
+224,000673.SZ,673,*ST当代,山西,影视音像,当代东方投资股份有限公司,"Lead Eastern Investment Co., Ltd",主板,SZSE,CNY,L,19970124,,N
+225,000676.SZ,676,智度股份,河南,互联网,智度科技股份有限公司,"Genimous Technology Co.,Ltd.",主板,SZSE,CNY,L,19961224,,S
+226,000677.SZ,677,恒天海龙,山东,化纤,恒天海龙股份有限公司,"Chtc Helon Co., Ltd.",主板,SZSE,CNY,L,19961226,,N
+229,000680.SZ,680,山推股份,山东,工程机械,山推工程机械股份有限公司,"Shantui Construction Machinery Co.,Ltd.",主板,SZSE,CNY,L,19970122,,N
+232,000683.SZ,683,远兴能源,内蒙,化工原料,内蒙古远兴能源股份有限公司,Inner Mongolia Yuan Xing Energy Company Limited,主板,SZSE,CNY,L,19970131,,S
+233,000685.SZ,685,中山公用,广东,水务,中山公用事业集团股份有限公司,"Zhongshan Public Utilities Group Co.,Ltd",主板,SZSE,CNY,L,19970123,,S
+234,000686.SZ,686,东北证券,吉林,证券,东北证券股份有限公司,"Northeast Securities Co.,Ltd.",主板,SZSE,CNY,L,19970227,,S
+235,000687.SZ,687,*ST华讯,河北,通信设备,华讯方舟股份有限公司,"Huaxun Fangzhou Co., Ltd",主板,SZSE,CNY,L,19970221,,N
+236,000688.SZ,688,国城矿业,重庆,铅锌,国城矿业股份有限公司,"Guocheng Mining Co.,Ltd",主板,SZSE,CNY,L,19970120,,S
+237,000690.SZ,690,宝新能源,广东,火力发电,广东宝丽华新能源股份有限公司,"Guangdong Baolihua New Energy Stock Co.,Ltd.",主板,SZSE,CNY,L,19970128,,S
+238,000691.SZ,691,亚太实业,甘肃,化工原料,海南亚太实业发展股份有限公司,"Hainan Yatai Industrial Development Co.,Ltd.",主板,SZSE,CNY,L,19970228,,N
+242,000698.SZ,698,沈阳化工,辽宁,化工原料,沈阳化工股份有限公司,"Shenyang Chemical Industry Co.,Ltd",主板,SZSE,CNY,L,19970220,,N
+243,000700.SZ,700,模塑科技,江苏,汽车配件,江南模塑科技股份有限公司,"Jiangnan Mould & Plastic Technology Co., Ltd.",主板,SZSE,CNY,L,19970228,,N
+246,000703.SZ,703,恒逸石化,广西,化纤,恒逸石化股份有限公司,"Hengyi Petrochemical Co., Ltd",主板,SZSE,CNY,L,19970328,,S
+248,000707.SZ,707,*ST双环,湖北,化工原料,湖北双环科技股份有限公司,"Hubei Shuanghuan Science and Technology Stock Co., Ltd.",主板,SZSE,CNY,L,19970415,,N
+249,000708.SZ,708,中信特钢,湖北,特种钢,中信泰富特钢集团股份有限公司,"Citic Pacific Special Steel Group Co., Ltd",主板,SZSE,CNY,L,19970326,,S
+250,000709.SZ,709,河钢股份,河北,普钢,河钢股份有限公司,HBIS Company Limited,主板,SZSE,CNY,L,19970416,,S
+257,000717.SZ,717,韶钢松山,广东,普钢,广东韶钢松山股份有限公司,"SGIS Songshan Co.,Ltd.",主板,SZSE,CNY,L,19970508,,S
+258,000718.SZ,718,苏宁环球,吉林,区域地产,苏宁环球股份有限公司,"Suning Universal Co.,Ltd",主板,SZSE,CNY,L,19970408,,S
+263,000723.SZ,723,美锦能源,山西,焦炭加工,山西美锦能源股份有限公司,"Shanxi Meijin Energy Co.,Ltd.",主板,SZSE,CNY,L,19970515,,S
+264,000725.SZ,725,京东方A,北京,元器件,京东方科技集团股份有限公司,"BOE Technology Group Co.,Ltd.",主板,SZSE,CNY,L,20010112,,S
+266,000727.SZ,727,冠捷科技,江苏,元器件,冠捷电子科技股份有限公司,"Tpv Technology Co., Ltd.",主板,SZSE,CNY,L,19970520,,S
+271,000733.SZ,733,振华科技,贵州,元器件,中国振华(集团)科技股份有限公司,"China Zhenhua(Group) Science & Technology Co.,Ltd",主板,SZSE,CNY,L,19970703,,S
+275,000738.SZ,738,航发控制,江苏,航空,中国航发动力控制股份有限公司,"Aecc Aero-Engine Control Co.,Ltd.",主板,SZSE,CNY,L,19970626,,S
+276,000739.SZ,739,普洛药业,浙江,化学制药,普洛药业股份有限公司,"Apeloa Pharmaceutical Co.,Ltd",主板,SZSE,CNY,L,19970509,,S
+278,000751.SZ,751,锌业股份,辽宁,铅锌,葫芦岛锌业股份有限公司,"Huludao Zinc Industry Co.,Ltd.",主板,SZSE,CNY,L,19970626,,N
+280,000753.SZ,753,漳州发展,福建,汽车服务,福建漳州发展股份有限公司,"Fujian Zhangzhou Development Co.,Ltd",主板,SZSE,CNY,L,19970626,,N
+281,000755.SZ,755,山西路桥,山西,路桥,山西路桥股份有限公司,"Shanxi Road & Bridge Co.,Ltd.",主板,SZSE,CNY,L,19970627,,N
+282,000756.SZ,756,新华制药,山东,化学制药,山东新华制药股份有限公司,Shandong Xinhua Pharmaceutical Company Limited,主板,SZSE,CNY,L,19970806,,S
+286,000761.SZ,761,本钢板材,辽宁,普钢,本钢板材股份有限公司,"Bengang Steel Plates Co.,Ltd",主板,SZSE,CNY,L,19980115,,S
+746,002281.SZ,2281,光迅科技,湖北,通信设备,武汉光迅科技股份有限公司,"Accelink Technologies Co.,Ltd.",中小板,SZSE,CNY,L,20090821,,S
+748,002283.SZ,2283,天润工业,山东,汽车配件,天润工业技术股份有限公司,"Tianrun Industry Technology Co., Ltd.",中小板,SZSE,CNY,L,20090821,,N
+752,002287.SZ,2287,奇正藏药,西藏,中成药,西藏奇正藏药股份有限公司,"Tibet Cheezheng Tibetan Medicine Co.,Ltd",中小板,SZSE,CNY,L,20090828,,S
+753,002288.SZ,2288,超华科技,广东,元器件,广东超华科技股份有限公司,"Guangdong Chaohua Technology Co.,Ltd",中小板,SZSE,CNY,L,20090903,,N
+755,002290.SZ,2290,禾盛新材,江苏,家用电器,苏州禾盛新型材料股份有限公司,"Suzhou Hesheng Special Material Co.,Ltd.",中小板,SZSE,CNY,L,20090903,,N
+758,002293.SZ,2293,罗莱生活,江苏,纺织,罗莱生活科技股份有限公司,"Luolai Lifestyle Technology Co.,Ltd.",中小板,SZSE,CNY,L,20090910,,S
+759,002294.SZ,2294,信立泰,深圳,化学制药,深圳信立泰药业股份有限公司,"Shenzhen Salubris Pharmaceuticals Co., Ltd.",中小板,SZSE,CNY,L,20090910,,S
+760,002295.SZ,2295,精艺股份,广东,铜,广东精艺金属股份有限公司,"Guangdong Jingyi Metal Co., Ltd.",中小板,SZSE,CNY,L,20090929,,N
+767,002302.SZ,2302,西部建设,新疆,水泥,中建西部建设股份有限公司,"China West Construction Group Co.,Ltd",中小板,SZSE,CNY,L,20091103,,S
+769,002304.SZ,2304,洋河股份,江苏,白酒,江苏洋河酒厂股份有限公司,"Jiangsu Yanghe Brewery Joint-Stock Co., Ltd.",中小板,SZSE,CNY,L,20091106,,S
+776,002311.SZ,2311,海大集团,广东,饲料,广东海大集团股份有限公司,"Guangdong Haid Group Co.,Limited",中小板,SZSE,CNY,L,20091127,,S
+777,002312.SZ,2312,川发龙蟒,四川,化工原料,四川发展龙蟒股份有限公司,"Sichuan Development Lomon Co.,Ltd",中小板,SZSE,CNY,L,20091203,,S
+783,002318.SZ,2318,久立特材,浙江,特种钢,浙江久立特材科技股份有限公司,"Zhejiang JIULI Hi-tech Metals Co., Ltd.",中小板,SZSE,CNY,L,20091211,,S
+785,002320.SZ,2320,海峡股份,海南,水运,海南海峡航运股份有限公司,"Hainan Strait Shipping Co.,Ltd",中小板,SZSE,CNY,L,20091216,,S
+789,002324.SZ,2324,普利特,上海,塑料,上海普利特复合材料股份有限公司,"Shanghai PRET Composites Co.,Ltd",中小板,SZSE,CNY,L,20091218,,S
+791,002326.SZ,2326,永太科技,浙江,化工原料,浙江永太科技股份有限公司,"Zhejiang Yongtai Technology Co.,Ltd.",中小板,SZSE,CNY,L,20091222,,S
+792,002327.SZ,2327,富安娜,深圳,纺织,深圳市富安娜家居用品股份有限公司,"Shenzhen Fuanna Bedding and Furnishing Co.,Ltd.",中小板,SZSE,CNY,L,20091230,,N
+797,002332.SZ,2332,仙琚制药,浙江,生物制药,浙江仙琚制药股份有限公司,"Zhejiang Xianju Pharmaceutical Co.,Ltd.",中小板,SZSE,CNY,L,20100112,,S
+799,002334.SZ,2334,英威腾,深圳,电气设备,深圳市英威腾电气股份有限公司,"Shenzhen Invt Electric Co., Ltd.",中小板,SZSE,CNY,L,20100113,,N
+800,002335.SZ,2335,科华数据,福建,电气设备,科华数据股份有限公司,"Kehua Data Co., Ltd",中小板,SZSE,CNY,L,20100113,,S
+803,002338.SZ,2338,奥普光电,吉林,电器仪表,长春奥普光电技术股份有限公司,"Changchun Up Optotech Co.,Ltd.",中小板,SZSE,CNY,L,20100115,,N
+805,002340.SZ,2340,格林美,深圳,小金属,格林美股份有限公司,"GEM Co.,Ltd.",中小板,SZSE,CNY,L,20100122,,S
+810,002345.SZ,2345,潮宏基,广东,服饰,广东潮宏基实业股份有限公司,"Guangdong CHJ Industry Co.,Ltd.",中小板,SZSE,CNY,L,20100128,,N
+814,002349.SZ,2349,精华制药,江苏,中成药,精华制药集团股份有限公司,"Jinghua Pharmaceutical Group Co., Ltd.",中小板,SZSE,CNY,L,20100203,,N
+816,002351.SZ,2351,漫步者,深圳,IT设备,深圳市漫步者科技股份有限公司,"Edifier Technology Co.,Ltd.",中小板,SZSE,CNY,L,20100205,,S
+818,002353.SZ,2353,杰瑞股份,山东,化工机械,烟台杰瑞石油服务集团股份有限公司,"Yantai Jereh Oilfield Services Group Co., Ltd.",中小板,SZSE,CNY,L,20100205,,S
+821,002356.SZ,2356,*ST赫美,深圳,其他商业,深圳赫美集团股份有限公司,"Shenzhen Hemei Group Co.,Ltd.",中小板,SZSE,CNY,L,20100209,,N
+822,002357.SZ,2357,富临运业,四川,公路,四川富临运业集团股份有限公司,"Sichuan Fulin Transportation Group Co.,Ltd.",中小板,SZSE,CNY,L,20100210,,N
+836,002372.SZ,2372,伟星新材,浙江,其他建材,浙江伟星新型建材股份有限公司,"Zhejiang Weixing New Building Materials Co.,Ltd.",中小板,SZSE,CNY,L,20100318,,S
+845,002381.SZ,2381,双箭股份,浙江,橡胶,浙江双箭橡胶股份有限公司,"Zhejiang Double Arrow Rubber Co., Ltd.",中小板,SZSE,CNY,L,20100402,,N
+846,002382.SZ,2382,蓝帆医疗,山东,医疗保健,蓝帆医疗股份有限公司,"Blue Sail Medical Co.,Ltd.",中小板,SZSE,CNY,L,20100402,,S
+850,002386.SZ,2386,天原股份,四川,化工原料,宜宾天原集团股份有限公司,"Yibin Tianyuan Group Co.,Ltd.",中小板,SZSE,CNY,L,20100409,,N
+855,002391.SZ,2391,长青股份,江苏,农药化肥,江苏长青农化股份有限公司,"Jiangsu Changqing Agrochemical Co.,Ltd",中小板,SZSE,CNY,L,20100416,,N
+856,002392.SZ,2392,北京利尔,北京,其他建材,北京利尔高温材料股份有限公司,"Beijing Lirr High Temperature Materials Co., Ltd.",中小板,SZSE,CNY,L,20100423,,N
+859,002395.SZ,2395,双象股份,江苏,塑料,无锡双象超纤材料股份有限公司,"Wuxi Double Elephant Micro Fibre Material Co.,Ltd",中小板,SZSE,CNY,L,20100429,,N
+861,002397.SZ,2397,梦洁股份,湖南,纺织,湖南梦洁家纺股份有限公司,"Hunan Mendale Hometextile Co.,Ltd.",中小板,SZSE,CNY,L,20100429,,N
+862,002398.SZ,2398,垒知集团,福建,其他建材,垒知控股集团股份有限公司,"Lets Holding Group Co.,Ltd.",中小板,SZSE,CNY,L,20100506,,N
+865,002401.SZ,2401,中远海科,上海,软件服务,中远海运科技股份有限公司,"Cosco Shipping Technology Co., Ltd",中小板,SZSE,CNY,L,20100506,,N
+866,002402.SZ,2402,和而泰,深圳,元器件,深圳和而泰智能控制股份有限公司,"Shenzhen H&T Intelligent Control Co.,Ltd.",中小板,SZSE,CNY,L,20100511,,S
+870,002406.SZ,2406,远东传动,河南,汽车配件,许昌远东传动轴股份有限公司,"Xuchang Yuandong Drive Shaft Co.,Ltd.",中小板,SZSE,CNY,L,20100518,,N
+871,002407.SZ,2407,多氟多,河南,化工原料,多氟多新材料股份有限公司,"Do-Fluoride New Materials Co., Ltd.",中小板,SZSE,CNY,L,20100518,,S
+872,002408.SZ,2408,齐翔腾达,山东,化工原料,淄博齐翔腾达化工股份有限公司,"Zibo Qixiang Tengda Chemical Co., Ltd.",中小板,SZSE,CNY,L,20100518,,S
+873,002409.SZ,2409,雅克科技,江苏,化工原料,江苏雅克科技股份有限公司,"Jiangsu Yoke Technology Co., Ltd.",中小板,SZSE,CNY,L,20100525,,S
+876,002412.SZ,2412,汉森制药,湖南,中成药,湖南汉森制药股份有限公司,"Hunan Hansen Pharmaceutical Co., Ltd.",中小板,SZSE,CNY,L,20100525,,N
+878,002414.SZ,2414,高德红外,湖北,电器仪表,武汉高德红外股份有限公司,"Wuhan Guide Infrared Co.,Ltd.",中小板,SZSE,CNY,L,20100716,,S
+879,002415.SZ,2415,海康威视,浙江,电器仪表,杭州海康威视数字技术股份有限公司,"Hangzhou Hikvision Digital Technology Co.,Ltd.",中小板,SZSE,CNY,L,20100528,,S
+880,002416.SZ,2416,爱施德,深圳,电器连锁,深圳市爱施德股份有限公司,"Shenzhen Aisidi Co., Ltd.",中小板,SZSE,CNY,L,20100528,,S
+884,002420.SZ,2420,毅昌股份,广东,塑料,广州毅昌科技股份有限公司,"Guangzhou Echom Sci.&Tech. Co.,Ltd.",中小板,SZSE,CNY,L,20100601,,N
+889,002425.SZ,2425,凯撒文化,广东,互联网,凯撒(中国)文化股份有限公司,"Kaiser (China) Culture Co., Ltd",中小板,SZSE,CNY,L,20100608,,S
+891,002427.SZ,2427,ST尤夫,浙江,化纤,浙江尤夫高新纤维股份有限公司,"Zhejiang Unifull Industrial Fibre Co., Ltd.",中小板,SZSE,CNY,L,20100608,,N
+893,002429.SZ,2429,兆驰股份,深圳,家用电器,深圳市兆驰股份有限公司,"Shenzhen Mtc Co.,Ltd.",中小板,SZSE,CNY,L,20100610,,S
+894,002430.SZ,2430,杭氧股份,浙江,化工机械,杭州制氧机集团股份有限公司,"Hangzhou Oxygen Plant Group Co., Ltd.",中小板,SZSE,CNY,L,20100610,,S
+898,002434.SZ,2434,万里扬,浙江,汽车配件,浙江万里扬股份有限公司,"Zhejiang Wanliyang Co., Ltd.",中小板,SZSE,CNY,L,20100618,,S
+900,002436.SZ,2436,兴森科技,深圳,元器件,深圳市兴森快捷电路科技股份有限公司,"Shenzhen Fastprint Circuit Tech Co.,Ltd.",中小板,SZSE,CNY,L,20100618,,S
+1430,002997.SZ,2997,瑞鹄模具,安徽,汽车配件,瑞鹄汽车模具股份有限公司,"Rayhoo Motor Dies Co.,Ltd.",中小板,SZSE,CNY,L,20200903,,N
+1431,002998.SZ,2998,优彩资源,江苏,化纤,优彩环保资源科技股份有限公司,"Elite Color Environmental Resources Science&Technology Co., Ltd",中小板,SZSE,CNY,L,20200925,,N
+1433,003000.SZ,3000,劲仔食品,湖南,食品,劲仔食品集团股份有限公司,"Jinzai Food Group Co.,Ltd.",中小板,SZSE,CNY,L,20200914,,N
+1434,003001.SZ,3001,中岩大地,北京,建筑工程,北京中岩大地科技股份有限公司,"Zhongyan Technology Co., Ltd.",中小板,SZSE,CNY,L,20201013,,N
+1439,003006.SZ,3006,百亚股份,重庆,造纸,重庆百亚卫生用品股份有限公司,"Chongqing Baiya Sanitary Products Co., Ltd.",中小板,SZSE,CNY,L,20200921,,S
+1441,003008.SZ,3008,开普检测,河南,电气设备,许昌开普检测研究院股份有限公司,"Xuchang KETOP Testing Research Institute Co.,Ltd",中小板,SZSE,CNY,L,20200923,,N
+1442,003009.SZ,3009,中天火箭,陕西,航空,陕西中天火箭技术股份有限公司,"Shaanxi Zhongtian Rocket Technology Co., Ltd",中小板,SZSE,CNY,L,20200925,,S
+1444,003011.SZ,3011,海象新材,浙江,家居用品,浙江海象新材料股份有限公司,"Zhejiang Walrus New Material Co.,Ltd.",中小板,SZSE,CNY,L,20200930,,N
+1446,003013.SZ,3013,地铁设计,广东,建筑工程,广州地铁设计研究院股份有限公司,"Guangzhou Metro Design&Research Institute Co., Ltd.",中小板,SZSE,CNY,L,20201022,,S
+1448,003016.SZ,3016,欣贺股份,福建,服饰,欣贺股份有限公司,"Xin Hee Co.,Ltd.",中小板,SZSE,CNY,L,20201026,,N
+1449,003017.SZ,3017,大洋生物,浙江,化工原料,浙江大洋生物科技集团股份有限公司,"Zhejiang Dayang Biotech Group Co., Ltd.",中小板,SZSE,CNY,L,20201026,,N
+1451,003019.SZ,3019,宸展光电,福建,元器件,宸展光电(厦门)股份有限公司,"TES Touch Embedded Solutions (Xiamen) Co., Ltd.",中小板,SZSE,CNY,L,20201117,,N
+1452,003020.SZ,3020,立方制药,安徽,化学制药,合肥立方制药股份有限公司,"Hefei Lifeon Pharmaceutical Co.,Ltd.",中小板,SZSE,CNY,L,20201215,,N
+1454,003022.SZ,3022,联泓新科,山东,化工原料,联泓新材料科技股份有限公司,Levima Advanced Materials Corporation,中小板,SZSE,CNY,L,20201208,,N
+1455,003023.SZ,3023,彩虹集团,四川,家用电器,成都彩虹电器(集团)股份有限公司,"Chengdu Rainbow Appliance(Group) Shares Co.,Ltd",中小板,SZSE,CNY,L,20201211,,N
+1456,003025.SZ,3025,思进智能,浙江,机械基件,思进智能成形装备股份有限公司,"Sijin Intelligent Forming Machinery Co., Ltd.",中小板,SZSE,CNY,L,20201211,,N
+1457,003026.SZ,3026,中晶科技,浙江,半导体,浙江中晶科技股份有限公司,"Zhejiang MTCN Technology Co.,Ltd.",中小板,SZSE,CNY,L,20201218,,N
+1458,003027.SZ,3027,同兴环保,安徽,环境保护,同兴环保科技股份有限公司,"Tongxing Environmental Protection Technology Co.,Ltd.",中小板,SZSE,CNY,L,20201218,,N
+1459,003028.SZ,3028,振邦智能,深圳,元器件,深圳市振邦智能科技股份有限公司,Genbyte Technology Inc.,中小板,SZSE,CNY,L,20201228,,N
+1462,003031.SZ,3031,中瓷电子,河北,元器件,河北中瓷电子科技股份有限公司,"Hebei Sinopack Electronic Technology Co.,Ltd.",中小板,SZSE,CNY,L,20210104,,N
+1464,003033.SZ,3033,征和工业,山东,机械基件,青岛征和工业股份有限公司,"Qingdao CHOHO Industrial Co., Ltd.",中小板,SZSE,CNY,L,20210111,,N
+1466,003036.SZ,3036,泰坦股份,浙江,纺织机械,浙江泰坦股份有限公司,"Zhejiang Taitan Co., Ltd.",中小板,SZSE,CNY,L,20210128,,N
+1467,003037.SZ,3037,三和管桩,广东,水泥,广东三和管桩股份有限公司,"Guangdong Sanhe Pile Co.,Ltd.",中小板,SZSE,CNY,L,20210204,,N
+1468,003038.SZ,3038,鑫铂股份,安徽,铝,安徽鑫铂铝业股份有限公司,"Anhui Xinbo Aluminum Co., Ltd.",中小板,SZSE,CNY,L,20210210,,N
+1469,003039.SZ,3039,顺控发展,广东,水务,广东顺控发展股份有限公司,Guangdong Shunkong Development Co. Ltd.,中小板,SZSE,CNY,L,20210308,,N
+1471,003041.SZ,3041,真爱美家,浙江,纺织,浙江真爱美家股份有限公司,"Zhejiang Truelove Vogue Co., Ltd",中小板,SZSE,CNY,L,20210406,,N
+1473,003043.SZ,3043,华亚智能,江苏,专用机械,苏州华亚智能科技股份有限公司,"Suzhou Huaya Intelligence Technology Co., Ltd.",中小板,SZSE,CNY,L,20210406,,N
+1474,003816.SZ,3816,中国广核,深圳,新型电力,中国广核电力股份有限公司,"Cgn Power Co.,Ltd.",中小板,SZSE,CNY,L,20190826,,S
+1477,300003.SZ,300003,乐普医疗,北京,医疗保健,乐普(北京)医疗器械股份有限公司,"Lepu Medical Technology (Beijing) Co.,Ltd.",创业板,SZSE,CNY,L,20091030,,S
+1481,300007.SZ,300007,汉威科技,河南,电器仪表,汉威科技集团股份有限公司,Hanwei Electronics Group Corporation,创业板,SZSE,CNY,L,20091030,,N
+1483,300009.SZ,300009,安科生物,安徽,生物制药,安徽安科生物工程(集团)股份有限公司,"Anhui Anke Biotechnology (Group) Co.,Ltd.",创业板,SZSE,CNY,L,20091030,,S
+1486,300012.SZ,300012,华测检测,深圳,电器仪表,华测检测认证集团股份有限公司,"Centre Testing International Group Co., Ltd.",创业板,SZSE,CNY,L,20091030,,S
+1488,300014.SZ,300014,亿纬锂能,广东,电气设备,惠州亿纬锂能股份有限公司,"Eve Energy Co., Ltd.",创业板,SZSE,CNY,L,20091030,,S
+1489,300015.SZ,300015,爱尔眼科,湖南,医疗保健,爱尔眼科医院集团股份有限公司,"Aier Eye Hospital Group Co.,Ltd",创业板,SZSE,CNY,L,20091030,,S
+1490,300016.SZ,300016,北陆药业,北京,中成药,北京北陆药业股份有限公司,"Beijing Beilu Pharmaceutical Co.,Ltd",创业板,SZSE,CNY,L,20091030,,N
+1500,300026.SZ,300026,红日药业,天津,中成药,天津红日药业股份有限公司,"Tianjin Chase Sun Pharmaceutical Co., Ltd.",创业板,SZSE,CNY,L,20091030,,S
+1501,300027.SZ,300027,华谊兄弟,浙江,影视音像,华谊兄弟传媒股份有限公司,Huayi Brothers Media Corporation,创业板,SZSE,CNY,L,20091030,,N
+1503,300030.SZ,300030,阳普医疗,广东,医疗保健,广州阳普医疗科技股份有限公司,"Guangzhou Improve Medical Instruments Co.,Ltd",创业板,SZSE,CNY,L,20091225,,N
+1504,300031.SZ,300031,宝通科技,江苏,互联网,无锡宝通科技股份有限公司,Wuxi Boton Technology Ltd.,创业板,SZSE,CNY,L,20091225,,S
+1506,300033.SZ,300033,同花顺,浙江,软件服务,浙江核新同花顺网络信息股份有限公司,"Hithink Royalflush Information Network Co.,Ltd.",创业板,SZSE,CNY,L,20091225,,S
+1507,300034.SZ,300034,钢研高纳,北京,小金属,北京钢研高纳科技股份有限公司,"Gaona Aero Material Co.,Ltd.",创业板,SZSE,CNY,L,20091225,,S
+1508,300035.SZ,300035,中科电气,湖南,电气设备,湖南中科电气股份有限公司,"Hunan Zhongke Electric Co.,Ltd.",创业板,SZSE,CNY,L,20091225,,N
+2038,300578.SZ,300578,会畅通讯,上海,通信设备,上海会畅通讯股份有限公司,"Bizconf Telecom Co.,Ltd.",创业板,SZSE,CNY,L,20170125,,N
+2040,300580.SZ,300580,贝斯特,江苏,汽车配件,无锡贝斯特精机股份有限公司,"Wuxi Best Precision Machinery Co., Ltd",创业板,SZSE,CNY,L,20170111,,N
+2042,300582.SZ,300582,英飞特,浙江,半导体,英飞特电子(杭州)股份有限公司,"Inventronics (Hangzhou), Inc.",创业板,SZSE,CNY,L,20161228,,N
+2045,300585.SZ,300585,奥联电子,江苏,汽车配件,南京奥联汽车电子电器股份有限公司,"Nanjing Aolian Ae&Ea Co.,Ltd",创业板,SZSE,CNY,L,20161229,,N
+2047,300587.SZ,300587,天铁股份,浙江,橡胶,浙江天铁实业股份有限公司,"Zhejiang Tiantie Industry Co.,Ltd.",创业板,SZSE,CNY,L,20170105,,N
+2050,300590.SZ,300590,移为通信,上海,通信设备,上海移为通信技术股份有限公司,"Queclink Wireless Solutions Co., Ltd.",创业板,SZSE,CNY,L,20170111,,S
+2053,300593.SZ,300593,新雷能,北京,电气设备,北京新雷能科技股份有限公司,"Beijing Relpow Technology Co., Ltd",创业板,SZSE,CNY,L,20170113,,N
+2055,300595.SZ,300595,欧普康视,安徽,医疗保健,欧普康视科技股份有限公司,Autek China Inc.,创业板,SZSE,CNY,L,20170117,,S
+2056,300596.SZ,300596,利安隆,天津,化工原料,天津利安隆新材料股份有限公司,Rianlon Corporation,创业板,SZSE,CNY,L,20170119,,S
+2059,300599.SZ,300599,雄塑科技,广东,塑料,广东雄塑科技集团股份有限公司,"Guangdong Xiongsu Technology Group Co., Ltd",创业板,SZSE,CNY,L,20170123,,N
+2061,300601.SZ,300601,康泰生物,深圳,生物制药,深圳康泰生物制品股份有限公司,"Shenzhen Kangtai Biological Products Co.,Ltd.",创业板,SZSE,CNY,L,20170207,,S
+2064,300604.SZ,300604,长川科技,浙江,专用机械,杭州长川科技股份有限公司,"Hangzhou Changchuan Technology Co.,Ltd",创业板,SZSE,CNY,L,20170417,,S
+2065,300605.SZ,300605,恒锋信息,福建,软件服务,恒锋信息科技股份有限公司,"Hengfeng Information Technology Co.,Ltd.",创业板,SZSE,CNY,L,20170208,,N
+2066,300606.SZ,300606,金太阳,广东,矿物制品,东莞金太阳研磨股份有限公司,"Dongguan Golden Sun Abrasives Co.,Ltd",创业板,SZSE,CNY,L,20170208,,N
+2067,300607.SZ,300607,拓斯达,广东,专用机械,广东拓斯达科技股份有限公司,"Guangdong Topstar Technology Co.,Ltd",创业板,SZSE,CNY,L,20170209,,S
+2070,300610.SZ,300610,晨化股份,江苏,化工原料,扬州晨化新材料股份有限公司,"Yangzhou Chenhua New Material Co.,Ltd.",创业板,SZSE,CNY,L,20170213,,N
+2073,300613.SZ,300613,富瀚微,上海,半导体,上海富瀚微电子股份有限公司,"Shanghai Fullhan Microelectronics Co., Ltd.",创业板,SZSE,CNY,L,20170220,,S
+2074,300614.SZ,300614,百川畅银,河南,环境保护,河南百川畅银环保能源股份有限公司,"Henan Bccy Environmental Energy Co.,Ltd",创业板,SZSE,CNY,L,20210525,,N
+2077,300617.SZ,300617,安靠智电,江苏,电气设备,江苏安靠智能输电工程科技股份有限公司,"Jiangsu Ankura Smart Transmission Engineering Technology Co.,Ltd.",创业板,SZSE,CNY,L,20170228,,N
+2078,300618.SZ,300618,寒锐钴业,江苏,小金属,南京寒锐钴业股份有限公司,"Nanjing Hanrui Cobalt Co., Ltd.",创业板,SZSE,CNY,L,20170306,,S
+2082,300622.SZ,300622,博士眼镜,深圳,其他商业,博士眼镜连锁股份有限公司,"Doctorglasses Chain Co., Ltd",创业板,SZSE,CNY,L,20170315,,N
+2083,300623.SZ,300623,捷捷微电,江苏,半导体,江苏捷捷微电子股份有限公司,"Jiangsu Jiejie Microelectronics Co., Ltd",创业板,SZSE,CNY,L,20170314,,S
+2084,300624.SZ,300624,万兴科技,西藏,软件服务,万兴科技集团股份有限公司,"Wondershare Technology Group Co.,Ltd",创业板,SZSE,CNY,L,20180118,,S
+2087,300627.SZ,300627,华测导航,上海,通信设备,上海华测导航技术股份有限公司,Shanghai Huace Navigation Technology Ltd,创业板,SZSE,CNY,L,20170321,,S
+2088,300628.SZ,300628,亿联网络,福建,通信设备,厦门亿联网络技术股份有限公司,"Yealink Network Technology Co., Ltd.",创业板,SZSE,CNY,L,20170317,,S
+2089,300629.SZ,300629,新劲刚,广东,元器件,广东新劲刚科技股份有限公司,"King-Strong New Material Technology Co.,Ltd",创业板,SZSE,CNY,L,20170324,,N
+2090,300630.SZ,300630,普利制药,海南,化学制药,海南普利制药股份有限公司,"Hainan Poly Pharm. Co., Ltd.",创业板,SZSE,CNY,L,20170328,,S
+2092,300632.SZ,300632,光莆股份,福建,半导体,厦门光莆电子股份有限公司,"Xiamen Guang Pu Electronics Co.,Ltd.",创业板,SZSE,CNY,L,20170406,,N
+2093,300633.SZ,300633,开立医疗,深圳,医疗保健,深圳开立生物医疗科技股份有限公司,Sonoscape Medical Corp.,创业板,SZSE,CNY,L,20170406,,S
+2096,300636.SZ,300636,同和药业,江西,化学制药,江西同和药业股份有限公司,"Jiangxi Synergy Pharmaceutical Co.,Ltd.",创业板,SZSE,CNY,L,20170331,,N
+2098,300638.SZ,300638,广和通,深圳,通信设备,深圳市广和通无线股份有限公司,Fibocom Wireless Inc.,创业板,SZSE,CNY,L,20170413,,S
+2099,300639.SZ,300639,凯普生物,广东,医疗保健,广东凯普生物科技股份有限公司,"Guangdong Hybribio Biotech Co.,Ltd.",创业板,SZSE,CNY,L,20170412,,S
+2101,300641.SZ,300641,正丹股份,江苏,化工原料,江苏正丹化学工业股份有限公司,"Jiangsu Zhengdan Chemical Industry Co., Ltd.",创业板,SZSE,CNY,L,20170418,,N
+2103,300643.SZ,300643,万通智控,浙江,汽车配件,万通智控科技股份有限公司,"Hamaton Automotive Technology Co.,Ltd.",创业板,SZSE,CNY,L,20170505,,N
+2104,300644.SZ,300644,南京聚隆,江苏,塑料,南京聚隆科技股份有限公司,"Nanjing Julong Science & Technology Co., Ltd",创业板,SZSE,CNY,L,20180206,,N
+2107,300648.SZ,300648,星云股份,福建,电器仪表,福建星云电子股份有限公司,"Fujian Nebula Electronics.,Ltd",创业板,SZSE,CNY,L,20170425,,N
+2108,300649.SZ,300649,杭州园林,浙江,建筑工程,杭州园林设计院股份有限公司,"Hangzhou Landscape Architecture Design Institute Co.,Ltd.",创业板,SZSE,CNY,L,20170505,,N
+2109,300650.SZ,300650,太龙股份,福建,电气设备,太龙(福建)商业照明股份有限公司,"Tecnon (Fujian) Commercial Lighting Co., Ltd",创业板,SZSE,CNY,L,20170503,,N
+2112,300653.SZ,300653,正海生物,山东,医疗保健,烟台正海生物科技股份有限公司,"Yantai Zhenghai Bio-Tech Co.,Ltd.",创业板,SZSE,CNY,L,20170516,,S
+2114,300655.SZ,300655,晶瑞电材,江苏,化工原料,晶瑞电子材料股份有限公司,"Crystal Clear Electronic Material Co.,Ltd.",创业板,SZSE,CNY,L,20170523,,S
+2115,300656.SZ,300656,民德电子,深圳,IT设备,深圳市民德电子科技股份有限公司,Shenzhen MinDe Electronics Technology Ltd.,创业板,SZSE,CNY,L,20170519,,N
+2614,600118.SH,600118,中国卫星,北京,航空,中国东方红卫星股份有限公司,"China Spacesat Co.,Ltd.",主板,SSE,CNY,L,19970908,,H
+2619,600123.SH,600123,兰花科创,山西,煤炭开采,山西兰花科技创业股份有限公司,"Shanxi Lanhua Sci-Tech Venture Co.,Ltd",主板,SSE,CNY,L,19981217,,N
+2621,600126.SH,600126,杭钢股份,浙江,普钢,杭州钢铁股份有限公司,"Hang Zhou Iron & Steel Co.,Ltd.",主板,SSE,CNY,L,19980311,,N
+2624,600129.SH,600129,太极集团,重庆,中成药,重庆太极实业(集团)股份有限公司,"Chongqing Taiji Industry (Group) Co.,Ltd.",主板,SSE,CNY,L,19971118,,N
+2625,600130.SH,600130,波导股份,浙江,通信设备,宁波波导股份有限公司,"Ningbo Bird Co.,Ltd.",主板,SSE,CNY,L,20000706,,N
+2627,600132.SH,600132,重庆啤酒,重庆,啤酒,重庆啤酒股份有限公司,"Chongqing Brewery Co.,Ltd.",主板,SSE,CNY,L,19971030,,H
+2634,600141.SH,600141,兴发集团,湖北,化工原料,湖北兴发化工集团股份有限公司,"Hubei Xingfa Chemicals Group Co.,Ltd",主板,SSE,CNY,L,19990616,,H
+2635,600143.SH,600143,金发科技,广东,塑料,金发科技股份有限公司,"Kingfa Sci.&Tech. Co.,Ltd.",主板,SSE,CNY,L,20040623,,H
+2638,600148.SH,600148,长春一东,吉林,汽车配件,长春一东离合器股份有限公司,"Changchun Yidong Clutch Co.,Ltd",主板,SSE,CNY,L,19980520,,N
+2643,600153.SH,600153,建发股份,福建,商贸代理,厦门建发股份有限公司,Xiamen C&D Inc.,主板,SSE,CNY,L,19980616,,H
+2650,600161.SH,600161,天坛生物,北京,生物制药,北京天坛生物制品股份有限公司,Beijing Tiantan Biological Products Corporation Limited,主板,SSE,CNY,L,19980616,,H
+2652,600163.SH,600163,中闽能源,福建,新型电力,中闽能源股份有限公司,"Zhongmin Energy Co., Ltd.",主板,SSE,CNY,L,19980602,,N
+2654,600166.SH,600166,福田汽车,北京,汽车整车,北汽福田汽车股份有限公司,"Beiqi Foton Motor Co.,Ltd.",主板,SSE,CNY,L,19980602,,N
+2655,600167.SH,600167,联美控股,辽宁,供气供热,联美量子股份有限公司,"Luenmei Quantum Co.,Ltd",主板,SSE,CNY,L,19990128,,H
+2659,600171.SH,600171,上海贝岭,上海,半导体,上海贝岭股份有限公司,"Shanghai Belling Corp.,Ltd",主板,SSE,CNY,L,19980924,,H
+2661,600173.SH,600173,卧龙地产,浙江,全国地产,卧龙地产集团股份有限公司,"Wolong Real Estate Group Co.,Ltd.",主板,SSE,CNY,L,19990415,,N
+2662,600176.SH,600176,中国巨石,浙江,玻璃,中国巨石股份有限公司,"China Jushi Co.,Ltd",主板,SSE,CNY,L,19990422,,H
+2664,600178.SH,600178,东安动力,黑龙江,汽车配件,哈尔滨东安汽车动力股份有限公司,"Harbin Dongan Auto Engine Co.,Ltd",主板,SSE,CNY,L,19981014,,N
+2666,600180.SH,600180,瑞茂通,山东,仓储物流,瑞茂通供应链管理股份有限公司,"CCS Supply Chain Management Co., Ltd.",主板,SSE,CNY,L,19980703,,N
+2668,600183.SH,600183,生益科技,广东,元器件,广东生益科技股份有限公司,"Shengyi Technology Co.,Ltd.",主板,SSE,CNY,L,19981028,,H
+2670,600185.SH,600185,格力地产,广东,区域地产,格力地产股份有限公司,"Gree Real Estate Co.,Ltd",主板,SSE,CNY,L,19990611,,H
+2671,600186.SH,600186,莲花健康,河南,食品,莲花健康产业集团股份有限公司,Lotus Health Group Company,主板,SSE,CNY,L,19980825,,N
+2673,600188.SH,600188,兖州煤业,山东,煤炭开采,兖州煤业股份有限公司,Yanzhou Coal Mining Company Limited,主板,SSE,CNY,L,19980701,,H
+2678,600193.SH,600193,创兴资源,上海,装修装饰,上海创兴资源开发股份有限公司,"Shanghai Prosolar Resources Development Co.,Ltd",主板,SSE,CNY,L,19990527,,N
+2679,600195.SH,600195,中牧股份,北京,饲料,中牧实业股份有限公司,"China Animal Husbandry Industry Co.,Ltd.",主板,SSE,CNY,L,19990107,,N
+2680,600196.SH,600196,复星医药,上海,化学制药,上海复星医药(集团)股份有限公司,"Shanghai Fosun Pharmaceutical (Group) Co., Ltd.",主板,SSE,CNY,L,19980807,,H
+2681,600197.SH,600197,伊力特,新疆,白酒,新疆伊力特实业股份有限公司,"Xinjiang Yilite Industry Co.,Ltd",主板,SSE,CNY,L,19990916,,H
+2682,600198.SH,600198,*ST大唐,北京,通信设备,大唐电信科技股份有限公司,"Datang Telecom Technology Co., Ltd",主板,SSE,CNY,L,19981021,,N
+2684,600200.SH,600200,江苏吴中,江苏,化学制药,江苏吴中医药发展股份有限公司,"Jiangsu Wuzhong Pharmaceutical Development Co., Ltd.",主板,SSE,CNY,L,19990401,,N
+2685,600201.SH,600201,生物股份,内蒙,农业综合,金宇生物技术股份有限公司,"Jinyu Bio-Technology Co.,Ltd.",主板,SSE,CNY,L,19990115,,N
+2689,600207.SH,600207,安彩高科,河南,供气供热,河南安彩高科股份有限公司,"Henan Ancai Hi-Tech Co.,Ltd",主板,SSE,CNY,L,19990714,,N
+3177,600800.SH,600800,渤海化学,天津,化工原料,天津渤海化学股份有限公司,"Tian Jin Bohai Chemical Co.,Ltd.",主板,SSE,CNY,L,19931206,,N
+3178,600801.SH,600801,华新水泥,湖北,水泥,华新水泥股份有限公司,"Huaxin Cement Co.,Ltd.",主板,SSE,CNY,L,19940103,,H
+3179,600802.SH,600802,福建水泥,福建,水泥,福建水泥股份有限公司,Fujian Cement Inc.,主板,SSE,CNY,L,19940103,,H
+3180,600803.SH,600803,新奥股份,河北,供气供热,新奥天然气股份有限公司,"ENN Natural Gas Co., Ltd.",主板,SSE,CNY,L,19940103,,H
+3181,600804.SH,600804,鹏博士,四川,电信运营,鹏博士电信传媒集团股份有限公司,"Dr.Peng Telecom&Media Group Co., Ltd.",主板,SSE,CNY,L,19940103,,N
+3184,600808.SH,600808,马钢股份,安徽,普钢,马鞍山钢铁股份有限公司,Maanshan Iron & Steel Company Limited,主板,SSE,CNY,L,19940106,,H
+3185,600809.SH,600809,山西汾酒,山西,白酒,山西杏花村汾酒厂股份有限公司,"Shanxi Xinghuacun Fen Wine Factory Co.,Ltd.",主板,SSE,CNY,L,19940106,,H
+3186,600810.SH,600810,神马股份,河南,化纤,神马实业股份有限公司,Shenma Industrial Co.Ltd,主板,SSE,CNY,L,19940106,,N
+3189,600814.SH,600814,杭州解百,浙江,百货,杭州解百集团股份有限公司,"Hangzhou Jiebai Group Co.,Limited",主板,SSE,CNY,L,19940114,,N
+3192,600817.SH,600817,宇通重工,河南,专用机械,宇通重工股份有限公司,"Yutong Heavy Industries Co.,Ltd.",主板,SSE,CNY,L,19940128,,N
+3196,600821.SH,600821,金开新能,天津,新型电力,金开新能源股份有限公司,Nyocor Company Limited,主板,SSE,CNY,L,19940128,,N
+3203,600828.SH,600828,茂业商业,四川,百货,茂业商业股份有限公司,"Maoye Commercial Co., Ltd",主板,SSE,CNY,L,19940224,,N
+3204,600829.SH,600829,人民同泰,黑龙江,医药商业,哈药集团人民同泰医药股份有限公司,HPGC Renmintongtai Pharmaceutical Corporation,主板,SSE,CNY,L,19940224,,N
+3207,600833.SH,600833,第一医药,上海,医药商业,上海第一医药股份有限公司,"Shanghai No.1 Pharmacy Co.,Ltd.",主板,SSE,CNY,L,19940224,,N
+3209,600835.SH,600835,上海机电,上海,运输设备,上海机电股份有限公司,"Shanghai Mechanical & Electrical Industry Co.,Ltd.",主板,SSE,CNY,L,19940224,,H
+3211,600837.SH,600837,海通证券,上海,证券,海通证券股份有限公司,"Haitong Securities Co., Ltd.",主板,SSE,CNY,L,19940224,,H
+3215,600843.SH,600843,上工申贝,上海,纺织机械,上工申贝(集团)股份有限公司,"Shang Gong Group Co.,Ltd.",主板,SSE,CNY,L,19940311,,N
+3217,600845.SH,600845,宝信软件,上海,软件服务,上海宝信软件股份有限公司,"Shanghai Baosight Software Co.,Ltd.",主板,SSE,CNY,L,19940311,,H
+3218,600846.SH,600846,同济科技,上海,建筑工程,上海同济科技实业股份有限公司,"Shanghai Tongji Science&Technology Industrial Co.,Ltd",主板,SSE,CNY,L,19940311,,H
+3220,600848.SH,600848,上海临港,上海,园区开发,上海临港控股股份有限公司,"Shanghai Lingang Holdings Co.,Ltd.",主板,SSE,CNY,L,19940324,,H
+3221,600850.SH,600850,电科数字,上海,软件服务,中电科数字技术股份有限公司,"CETC Digital Technology Co.,Ltd.",主板,SSE,CNY,L,19940324,,H
+3226,600856.SH,600856,ST中天,北京,供气供热,中兴天恒能源科技(北京)股份公司,"Zhongxing Tianheng Energy Technology(Beijing) Co.,Ltd.",主板,SSE,CNY,L,19940425,,N
+3229,600859.SH,600859,王府井,北京,百货,王府井集团股份有限公司,"Wangfujing Group Co., Ltd.",主板,SSE,CNY,L,19940506,,H
+3232,600862.SH,600862,中航高科,江苏,航空,中航航空高科技股份有限公司,"Avic Aviation High-Technology Co.,Ltd.",主板,SSE,CNY,L,19940520,,H
+3235,600865.SH,600865,百大集团,浙江,百货,百大集团股份有限公司,"Baida Group Co.,Ltd.",主板,SSE,CNY,L,19940809,,N
+3236,600866.SH,600866,星湖科技,广东,食品,广东肇庆星湖生物科技股份有限公司,"STAR LAKE Bioscience Co.,Inc Zhaoqing Guangdong",主板,SSE,CNY,L,19940818,,N
+3237,600867.SH,600867,通化东宝,吉林,生物制药,通化东宝药业股份有限公司,"Tonghua Dongbao Pharmaceutical Co.,Ltd.",主板,SSE,CNY,L,19940824,,H
+3239,600869.SH,600869,远东股份,青海,电气设备,远东智慧能源股份有限公司,"Far East Smarter Energy Co.,Ltd",主板,SSE,CNY,L,19950206,,N
+3241,600871.SH,600871,石化油服,北京,石油开采,中石化石油工程技术服务股份有限公司,Sinopec Oilfield Service Corporation,主板,SSE,CNY,L,19950411,,H
+3242,600872.SH,600872,中炬高新,广东,食品,中炬高新技术实业(集团)股份有限公司,"Jonjee Hi-Tech Industrial and Commercial Holding Co.,Ltd",主板,SSE,CNY,L,19950124,,H
+3243,600873.SH,600873,梅花生物,西藏,食品,梅花生物科技集团股份有限公司,"Meihua Holdings Group Co.,Ltd",主板,SSE,CNY,L,19950217,,N
+3244,600874.SH,600874,创业环保,天津,环境保护,天津创业环保集团股份有限公司,Tianjin Capital Environmental Protection Group Company Limited,主板,SSE,CNY,L,19950630,,H
+3245,600875.SH,600875,东方电气,四川,电气设备,东方电气股份有限公司,Dongfang Electric Corporation Limited,主板,SSE,CNY,L,19951010,,H
+3246,600876.SH,600876,洛阳玻璃,河南,玻璃,洛阳玻璃股份有限公司,Luoyang Glass Company Limited,主板,SSE,CNY,L,19951031,,H
+3251,600882.SH,600882,妙可蓝多,上海,乳制品,上海妙可蓝多食品科技股份有限公司,"Shanghai Milkground Food Tech Co., Ltd.",主板,SSE,CNY,L,19951206,,N
+3253,600884.SH,600884,杉杉股份,浙江,电气设备,宁波杉杉股份有限公司,"Ningbo Shanshan Co.,Ltd.",主板,SSE,CNY,L,19960130,,N
+3254,600885.SH,600885,宏发股份,湖北,电气设备,宏发科技股份有限公司,"Hongfa Technology Co., Ltd.",主板,SSE,CNY,L,19960205,,H
+3740,603355.SH,603355,莱克电气,江苏,家用电器,莱克电气股份有限公司,"Kingclean Electric Co.,Ltd",主板,SSE,CNY,L,20150513,,H
+3742,603357.SH,603357,设计总院,安徽,建筑工程,安徽省交通规划设计研究总院股份有限公司,"Anhui Transport Consulting & Design Institute Co.,Ltd.",主板,SSE,CNY,L,20170801,,H
+3743,603358.SH,603358,华达科技,江苏,汽车配件,华达汽车科技股份有限公司,"Huada Automotive Technology Corp.,Ltd",主板,SSE,CNY,L,20170125,,N
+3744,603359.SH,603359,东珠生态,江苏,环境保护,东珠生态环保股份有限公司,"Dongzhu Ecological Environment Protection Co.,Ltd",主板,SSE,CNY,L,20170901,,N
+3745,603360.SH,603360,百傲化学,辽宁,化工原料,大连百傲化学股份有限公司,Dalian BIO-CHEM Company Limited,主板,SSE,CNY,L,20170206,,H
+3747,603365.SH,603365,水星家纺,上海,纺织,上海水星家用纺织品股份有限公司,"Shanghai Shuixing Home Textile Co., Ltd",主板,SSE,CNY,L,20171120,,N
+3749,603367.SH,603367,辰欣药业,山东,化学制药,辰欣药业股份有限公司,"Cisen Pharmaceutical Co.,Ltd.",主板,SSE,CNY,L,20170929,,H
+3750,603368.SH,603368,柳药股份,广西,医药商业,广西柳州医药股份有限公司,"Guangxi Liuzhou Pharmaceutical Co., Ltd.",主板,SSE,CNY,L,20141204,,H
+3751,603369.SH,603369,今世缘,江苏,白酒,江苏今世缘酒业股份有限公司,"Jiangsu King's Luck Brewery Joint-Stock Co., Ltd.",主板,SSE,CNY,L,20140703,,H
+3752,603377.SH,603377,东方时尚,北京,汽车服务,东方时尚驾驶学校股份有限公司,"Eastern Pioneer Driving School Co., Ltd.",主板,SSE,CNY,L,20160205,,N
+3755,603380.SH,603380,易德龙,江苏,元器件,苏州易德龙科技股份有限公司,"Suzhou Etron Technologies Co.,Ltd",主板,SSE,CNY,L,20170622,,N
+3756,603383.SH,603383,顶点软件,福建,软件服务,福建顶点软件股份有限公司,"Fujian Apex Software Co.,Ltd",主板,SSE,CNY,L,20170522,,N
+3757,603385.SH,603385,惠达卫浴,河北,家居用品,惠达卫浴股份有限公司,"Huida Sanitary Ware Co., Ltd",主板,SSE,CNY,L,20170405,,N
+3758,603386.SH,603386,广东骏亚,广东,元器件,广东骏亚电子科技股份有限公司,"Guangdong Champion Asia Electronics Co.,Ltd.",主板,SSE,CNY,L,20170912,,N
+3759,603387.SH,603387,基蛋生物,江苏,医疗保健,基蛋生物科技股份有限公司,"Getein Biotech, Inc",主板,SSE,CNY,L,20170717,,H
+3763,603392.SH,603392,万泰生物,北京,医疗保健,北京万泰生物药业股份有限公司,"Beijing Wantai Biological Pharmacy Enterprise Co., Ltd.",主板,SSE,CNY,L,20200429,,H
+3764,603393.SH,603393,新天然气,新疆,供气供热,新疆鑫泰天然气股份有限公司,"Xinjiang Xintai Natural Gas Co.,Ltd.",主板,SSE,CNY,L,20160912,,H
+3765,603396.SH,603396,金辰股份,辽宁,专用机械,营口金辰机械股份有限公司,"Yingkou Jinchen Machinery Co., Ltd.",主板,SSE,CNY,L,20171018,,N
+3768,603408.SH,603408,建霖家居,福建,家居用品,厦门建霖健康家居股份有限公司,Runner(Xiamen) Corp.,主板,SSE,CNY,L,20200730,,N
+3769,603416.SH,603416,信捷电气,江苏,电气设备,无锡信捷电气股份有限公司,"Wuxi Xinje Electric Co.,Ltd.",主板,SSE,CNY,L,20161221,,H
+3771,603429.SH,603429,集友股份,安徽,广告包装,安徽集友新材料股份有限公司,"Anhui Genuine New Materials Co.,Ltd.",主板,SSE,CNY,L,20170124,,H
+3772,603439.SH,603439,贵州三力,贵州,中成药,贵州三力制药股份有限公司,"Guizhou SanLi Pharmaceutical Co.,Ltd.",主板,SSE,CNY,L,20200428,,N
+3773,603444.SH,603444,吉比特,福建,互联网,厦门吉比特网络技术股份有限公司,"G-Bits Network Technology(Xiamen)Co., Ltd.",主板,SSE,CNY,L,20170104,,H
+3774,603456.SH,603456,九洲药业,浙江,化学制药,浙江九洲药业股份有限公司,"Zhejiang Jiuzhou Pharmaceutical Co., Ltd.",主板,SSE,CNY,L,20141010,,H
+3775,603458.SH,603458,勘设股份,贵州,建筑工程,贵州省交通规划勘察设计研究院股份有限公司,"Guizhou Transportation Planning Survey&Design Academe Co.,Ltd.",主板,SSE,CNY,L,20170809,,N
+3776,603466.SH,603466,风语筑,上海,文教休闲,上海风语筑文化科技股份有限公司,"Shanghai Fengyuzhu Culture Technology Co., Ltd.",主板,SSE,CNY,L,20171020,,H
+3777,603477.SH,603477,巨星农牧,四川,农业综合,乐山巨星农牧股份有限公司,Leshan Giantstar Farming&Husbandry Corporation Limited,主板,SSE,CNY,L,20171218,,N
+3778,603486.SH,603486,科沃斯,江苏,家用电器,科沃斯机器人股份有限公司,"Ecovacs Robotics Co., Ltd",主板,SSE,CNY,L,20180528,,H
+3780,603489.SH,603489,八方股份,江苏,电气设备,八方电气(苏州)股份有限公司,"Bafang Electric( Suzhou) Co.,Ltd.",主板,SSE,CNY,L,20191111,,H
+3783,603500.SH,603500,祥和实业,浙江,运输设备,浙江天台祥和实业股份有限公司,"Zhejiang Tiantai Xianghe Industrial Co., Ltd.",主板,SSE,CNY,L,20170904,,N
+3784,603501.SH,603501,韦尔股份,上海,半导体,上海韦尔半导体股份有限公司,"Will Semiconductor Co.,Ltd. Shanghai",主板,SSE,CNY,L,20170504,,H
+3785,603505.SH,603505,金石资源,浙江,矿物制品,金石资源集团股份有限公司,"China Kings Resources Group Co., Ltd.",主板,SSE,CNY,L,20170503,,H
+3786,603506.SH,603506,南都物业,浙江,房产服务,南都物业服务集团股份有限公司,"Nacity Property Service Group Co.,Ltd",主板,SSE,CNY,L,20180201,,N
+3788,603508.SH,603508,思维列控,河南,软件服务,河南思维自动化设备股份有限公司,"Henan Thinker Automatic Equipment Co., Ltd.",主板,SSE,CNY,L,20151224,,H
+3789,603511.SH,603511,爱慕股份,北京,服饰,爱慕股份有限公司,"Aimer Co.,Ltd.",主板,SSE,CNY,L,20210531,,N
+3790,603515.SH,603515,欧普照明,上海,电气设备,欧普照明股份有限公司,"Opple Lighting Co., Ltd",主板,SSE,CNY,L,20160819,,H
+3792,603517.SH,603517,绝味食品,湖南,食品,绝味食品股份有限公司,"Juewei Food Co., Ltd.",主板,SSE,CNY,L,20170317,,H
+3793,603518.SH,603518,锦泓集团,江苏,服饰,锦泓时装集团股份有限公司,"Jinhong Fashion Group Co.,Ltd",主板,SSE,CNY,L,20141203,,N
+3794,603519.SH,603519,立霸股份,江苏,家用电器,江苏立霸实业股份有限公司,"Jiangsu Liba Enterprise Joint-Stock Co.,Ltd",主板,SSE,CNY,L,20150319,,N
+3795,603520.SH,603520,司太立,浙江,化学制药,浙江司太立制药股份有限公司,"Zhejiang Starry Pharmaceutical Co., Ltd.",主板,SSE,CNY,L,20160309,,H
+3796,603527.SH,603527,众源新材,安徽,铜,安徽众源新材料股份有限公司,"Anhui Zhongyuan New Materials Co.,Ltd.",主板,SSE,CNY,L,20170907,,N
+3798,603529.SH,603529,爱玛科技,天津,摩托车,爱玛科技集团股份有限公司,"Aima Technology Group Co.,Ltd.",主板,SSE,CNY,L,20210615,,N
+3800,603533.SH,603533,掌阅科技,北京,互联网,掌阅科技股份有限公司,"Ireader Technology Co., Ltd",主板,SSE,CNY,L,20170921,,H
+3801,603535.SH,603535,嘉诚国际,广东,仓储物流,广州市嘉诚国际物流股份有限公司,"Guangzhou Jiacheng International Logistics Co.,Ltd.",主板,SSE,CNY,L,20170808,,N
+3803,603538.SH,603538,美诺华,浙江,化学制药,宁波美诺华药业股份有限公司,"Ningbo Menovo Pharmaceutical Co., Ltd.",主板,SSE,CNY,L,20170407,,N
+3805,603555.SH,603555,ST贵人,福建,服饰,贵人鸟股份有限公司,"Guirenniao Co.,Ltd.",主板,SSE,CNY,L,20140124,,N
+3808,603558.SH,603558,健盛集团,浙江,纺织,浙江健盛集团股份有限公司,"Zhejiang Jasan Holding Group Co.,Ltd.",主板,SSE,CNY,L,20150127,,N
+3810,603565.SH,603565,中谷物流,上海,仓储物流,上海中谷物流股份有限公司,"Shanghai Zhonggu Logistics Co., Ltd.",主板,SSE,CNY,L,20200925,,H
+3811,603566.SH,603566,普莱柯,河南,生物制药,普莱柯生物工程股份有限公司,"Pulike Biological Engineering,Inc.",主板,SSE,CNY,L,20150518,,N
+3812,603567.SH,603567,珍宝岛,黑龙江,中成药,黑龙江珍宝岛药业股份有限公司,"Heilongjiang ZBD Pharmaceutical Co.,Ltd.",主板,SSE,CNY,L,20150424,,N
+3813,603568.SH,603568,伟明环保,浙江,环境保护,浙江伟明环保股份有限公司,"Zhejiang Weiming Environment Protection Co.,Ltd.",主板,SSE,CNY,L,20150528,,H
+3814,603569.SH,603569,长久物流,北京,仓储物流,北京长久物流股份有限公司,Beijing Changjiu Logistics Corp.,主板,SSE,CNY,L,20160810,,N
+3816,603578.SH,603578,三星新材,浙江,玻璃,浙江三星新材股份有限公司,"Zhejiang Three Stars New Materials Co.,Ltd.",主板,SSE,CNY,L,20170306,,N
+3817,603579.SH,603579,荣泰健康,上海,医疗保健,上海荣泰健康科技股份有限公司,Shanghai Rongtai Health Technology Corporation Limited,主板,SSE,CNY,L,20170111,,N
+4331,688314.SH,688314,康拓医疗,陕西,医疗保健,西安康拓医疗技术股份有限公司,"Kontour(Xi'an) Medical Technology Co., Ltd.",科创板,SSE,CNY,L,20210518,,N
+4332,688315.SH,688315,诺禾致源,北京,医疗保健,北京诺禾致源科技股份有限公司,"Novogene Co., Ltd.",科创板,SSE,CNY,L,20210413,,N
+4334,688317.SH,688317,之江生物,上海,生物制药,上海之江生物科技股份有限公司,"Shanghai ZJ Bio-Tech Co., Ltd",科创板,SSE,CNY,L,20210118,,N
+4336,688319.SH,688319,欧林生物,四川,生物制药,成都欧林生物科技股份有限公司,Chengdu Olymvax Biopharmaceuticals Inc.,科创板,SSE,CNY,L,20210608,,N
+4338,688323.SH,688323,瑞华泰,深圳,塑料,深圳瑞华泰薄膜科技股份有限公司,"Rayitek Hi-Tech Film Company Ltd., Shenzhen",科创板,SSE,CNY,L,20210428,,N
+4339,688328.SH,688328,深科达,深圳,元器件,深圳市深科达智能装备股份有限公司,"Shenzhen S-King Intelligent Equipment Co., Ltd.",科创板,SSE,CNY,L,20210309,,N
+4341,688330.SH,688330,宏力达,上海,电气设备,上海宏力达信息技术股份有限公司,"Shanghai Holystar Information Technology Co., Ltd.",科创板,SSE,CNY,L,20201015,,N
+4347,688345.SH,688345,博力威,广东,电气设备,广东博力威科技股份有限公司,"Guangdong Greenway Technology Co., Ltd.",科创板,SSE,CNY,L,20210611,,N
+4348,688350.SH,688350,富淼科技,江苏,化工原料,江苏富淼科技股份有限公司,"Jiangsu Feymer Technology Co., Ltd.",科创板,SSE,CNY,L,20210128,,N
+4349,688355.SH,688355,明志科技,江苏,机械基件,苏州明志科技股份有限公司,"Suzhou Mingzhi Technology Co., Ltd.",科创板,SSE,CNY,L,20210512,,N
+4350,688356.SH,688356,键凯科技,北京,化学制药,北京键凯科技股份有限公司,"Jenkem Technology Co., Ltd.",科创板,SSE,CNY,L,20200826,,N
+4351,688357.SH,688357,建龙微纳,河南,化工原料,洛阳建龙微纳新材料股份有限公司,"Luoyang Jalon Micro-nano New Materials Co.,Ltd.",科创板,SSE,CNY,L,20191204,,N
+4353,688359.SH,688359,三孚新科,广东,化工原料,广州三孚新材料科技股份有限公司,"Guangzhou Sanfu New Materials Technology Co.,Ltd",科创板,SSE,CNY,L,20210521,,N
+4354,688360.SH,688360,德马科技,浙江,机械基件,浙江德马科技股份有限公司,"Zhejiang Damon Technology Co.,Ltd.",科创板,SSE,CNY,L,20200602,,N
+4355,688363.SH,688363,华熙生物,山东,生物制药,华熙生物科技股份有限公司,Bloomage Biotechnology Corporation Limited,科创板,SSE,CNY,L,20191106,,N
+4359,688368.SH,688368,晶丰明源,上海,半导体,上海晶丰明源半导体股份有限公司,"Shanghai Bright Power Semiconductor Co., Ltd.",科创板,SSE,CNY,L,20191014,,N
+4362,688378.SH,688378,奥来德,吉林,专用机械,吉林奥来德光电材料股份有限公司,"Jilin OLED Material Tech Co.,Ltd.",科创板,SSE,CNY,L,20200903,,N
+4364,688383.SH,688383,新益昌,深圳,专用机械,深圳新益昌科技股份有限公司,"Shenzhen Xinyichang Technology Co., Ltd.",科创板,SSE,CNY,L,20210428,,N
+4366,688386.SH,688386,泛亚微透,江苏,化工原料,江苏泛亚微透科技股份有限公司,Pan Asian Microvent Tech (Jiangsu) Corporation,科创板,SSE,CNY,L,20201016,,N
+4367,688388.SH,688388,嘉元科技,广东,铜,广东嘉元科技股份有限公司,"Guangdong Jiayuan Technology Co.,Ltd.",科创板,SSE,CNY,L,20190722,,N
+4368,688389.SH,688389,普门科技,深圳,医疗保健,深圳普门科技股份有限公司,"Shenzhen Lifotronic Technology Co.,Ltd.",科创板,SSE,CNY,L,20191105,,N
+4369,688390.SH,688390,固德威,江苏,电气设备,江苏固德威电源科技股份有限公司,"Jiangsu Goodwe Power Supply Technology Co.,Ltd",科创板,SSE,CNY,L,20200904,,N
+4370,688393.SH,688393,安必平,广东,医疗保健,广州安必平医药科技股份有限公司,"Guangzhou LBP Medicine Science & Technology Co., Ltd.",科创板,SSE,CNY,L,20200820,,N
+4371,688395.SH,688395,正弦电气,深圳,电气设备,深圳市正弦电气股份有限公司,"Shenzhen Sine Electric Co.,Ltd.",科创板,SSE,CNY,L,20210429,,N
+4372,688396.SH,688396,华润微,江苏,半导体,华润微电子有限公司,China Resources Microelectronics Limited,科创板,SSE,CNY,L,20200227,,N
+4373,688398.SH,688398,赛特新材,福建,矿物制品,福建赛特新材股份有限公司,"Fujian SuperTech Advanced Material Co.,Ltd.",科创板,SSE,CNY,L,20200211,,N
+4374,688399.SH,688399,硕世生物,江苏,医疗保健,江苏硕世生物科技股份有限公司,"Jiangsu Bioperfectus Technologies Co., Ltd.",科创板,SSE,CNY,L,20191205,,N
+4377,688425.SH,688425,铁建重工,湖南,专用机械,中国铁建重工集团股份有限公司,China Railway Construction Heavy Industry Corporation Limited,科创板,SSE,CNY,L,20210622,,N
+4380,688468.SH,688468,科美诊断,北京,医疗保健,科美诊断技术股份有限公司,"Chemclin Diagnostics Co., Ltd.",科创板,SSE,CNY,L,20210409,,N
+4382,688499.SH,688499,利元亨,广东,专用机械,广东利元亨智能装备股份有限公司,"Guangdong Lyric Robot Automation Co., Ltd.",科创板,SSE,CNY,L,20210701,,N
+4386,688508.SH,688508,芯朋微,江苏,半导体,无锡芯朋微电子股份有限公司,Wuxi Chipown Micro-Electronics Limited,科创板,SSE,CNY,L,20200722,,N
+4389,688511.SH,688511,天微电子,四川,元器件,四川天微电子股份有限公司,"Sichuan Tianwei Electronic Co.,LTD.",科创板,SSE,CNY,L,20210730,,N
+4390,688513.SH,688513,苑东生物,四川,化学制药,成都苑东生物制药股份有限公司,"Chengdu Easton Bio Pharmaceuticals Co.,Ltd",科创板,SSE,CNY,L,20200902,,N
+4391,688516.SH,688516,奥特维,江苏,专用机械,无锡奥特维科技股份有限公司,"Wuxi Autowell Technology Co.,Ltd.",科创板,SSE,CNY,L,20200521,,N
+4394,688519.SH,688519,南亚新材,上海,元器件,南亚新材料科技股份有限公司,"Nanya New Material Technology Co.,Ltd.",科创板,SSE,CNY,L,20200818,,N
+4397,688526.SH,688526,科前生物,湖北,农业综合,武汉科前生物股份有限公司,"Wuhan Keqian Biology Co.,Ltd",科创板,SSE,CNY,L,20200922,,N
+4400,688533.SH,688533,上声电子,江苏,元器件,苏州上声电子股份有限公司,"Suzhou Sonavox Electronics Co.,Ltd.",科创板,SSE,CNY,L,20210419,,N
+4404,688551.SH,688551,科威尔,安徽,专用机械,合肥科威尔电源系统股份有限公司,"Hefei Kewell Power System Co.,Ltd.",科创板,SSE,CNY,L,20200910,,N
+4405,688555.SH,688555,泽达易盛,天津,软件服务,泽达易盛(天津)科技股份有限公司,"Essence Information Technology Co., Ltd.",科创板,SSE,CNY,L,20200623,,N
+4406,688556.SH,688556,高测股份,山东,专用机械,青岛高测科技股份有限公司,"Qingdao Gaoce Technology Co., Ltd.",科创板,SSE,CNY,L,20200807,,N
+4408,688558.SH,688558,国盛智科,江苏,机床制造,南通国盛智能科技集团股份有限公司,"Nantong Guosheng Intelligence Technology Group Co., Ltd.",科创板,SSE,CNY,L,20200630,,N

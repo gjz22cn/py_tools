@@ -27,6 +27,7 @@ class DataUtil:
         self.p230_dir = os.path.join(self.root_dir, 'p230')
         self.single_data_dir = os.path.join(self.root_dir, 'single_d')
         self.corr_dir = os.path.join(self.root_dir, 'corr')
+        self.fina_indicator_dir = os.path.join(self.root_dir, 'fina_indi')
         ts.set_token('b1de6890364825a4b7b2d227b64c09a486239daf67451c5638404c62')
         self.pro = ts.pro_api()
         self.downloadClient = DownloadClient()
@@ -34,6 +35,9 @@ class DataUtil:
         self.start_eva_date = 20170103
         self.eva_date = ''
         self.eva_date_str = ''
+
+    def get_stock_list(self, filename='stock_list_tmp.csv'):
+        self.downloadClient.getStockList(filename)
 
     def download_stock(self, code, name):
         df = self.pro.daily(ts_code=code, start_date=self.start_date, end_date=self.end_date)
@@ -69,8 +73,8 @@ class DataUtil:
     # ##########################################################################################
     # stock list funcs
     # ##########################################################################################
-    def get_all_stocks(self, type):
-        file = os.path.join(self.root_dir, 'stock_list.csv')
+    def get_all_stocks(self, type, filename='stock_list.csv'):
+        file = os.path.join(self.root_dir, filename)
         if not os.path.exists(file):
             return []
 
@@ -458,6 +462,14 @@ class DataUtil:
             self.downloadClient.get_data_for_stock_no_fenbi(stock, skip_date)
             #self.downloadClient.get_wk_data_for_stock(stock, skip_date)
 
+
+    def download_for_stocks_pri(self, type, skip_date):
+        stocks = self.get_all_stocks(type, filename='stock_list_pri.csv')
+        for stock in stocks:
+            # self.downloadClient.getStockDailyInfo(stock)
+            # down stock data using tushare
+            self.downloadClient.get_data_for_stock_no_fenbi(stock, skip_date)
+
     # the last day's data, calculated from p230
     def gen_today_p230_for_stock(self, st_code):
         date = datetime.datetime.now().strftime('%Y%m%d')
@@ -843,6 +855,28 @@ class DataUtil:
 
         print(df_stock.index.values)
 
+    '''
+    财务指标
+    '''
+    def get_fina_indicator_for_one_stock(self, st_code):
+        file_path = os.path.join(self.fina_indicator_dir, st_code + '.csv')
+        if os.path.exists(file_path):
+            print 'skip ' + st_code
+            return
+
+        try:
+            print st_code, self.eva_date
+            df = self.pro.query('fina_indicator', ts_code=st_code, start_date='20210101', end_date=str(self.eva_date))
+        except Exception,err:
+            return
+        else:
+            df.to_csv(os.path.join(self.fina_indicator_dir, st_code+'.csv'), encoding="utf_8_sig")
+
+    def get_all_fina_indicator(self):
+        stocks = self.get_all_stocks(3, 'stock_list_tmp.csv')
+        print stocks
+        for stock in stocks:
+            self.get_fina_indicator_for_one_stock(stock)
 
 if __name__ == '__main__':
     dataUtil = DataUtil('../')
@@ -887,10 +921,12 @@ if __name__ == '__main__':
     # steps for corr calc start
     #############################################################################
     # Step0: set global var
-    dataUtil.set_eva_date(20211015)
+    dataUtil.set_eva_date(20211112)
 
     # Step1: update stock data
-    dataUtil.download_for_stocks_2(3, '20211015')
+    dataUtil.download_for_stocks_2(3, '20211112')
+    #dataUtil.download_for_stocks_pri(3, '20211112')
+
     #dataUtil.download_for_stocks_2(3, None)
 
     # Step2: concat all stocks by date close price
@@ -911,3 +947,8 @@ if __name__ == '__main__':
     #############################################################################
     # dataUtil.test_func1()
     #dataUtil.stock_list_del_index(idx)
+
+    #############################################################################
+    # get stock list
+    # dataUtil.get_stock_list()
+    #dataUtil.get_all_fina_indicator()
