@@ -6,10 +6,7 @@ import pandas as pd
 from StUtil import StUtil
 import scipy.signal as signal
 import matplotlib.pyplot as plt
-import time
-import datetime
-import threading
-from time import sleep, ctime
+from amplitude import Amplitude
 
 
 class ZbUtil:
@@ -27,6 +24,7 @@ class ZbUtil:
         self.zb_dir = os.path.join(self.root_dir, 'zb')
         self.fina_indicator_dir = os.path.join(self.root_dir, 'fina_indi')
         self.stUtil = StUtil(self.root_dir)
+        self.apmlitude = Amplitude()
         self.calc_date = 'unknown'
         self.eva = [[0, 0] for i in range(20)]
         self.stock_list = []
@@ -466,7 +464,9 @@ class ZbUtil:
 
             up_days = top_idx[0][top_idx_len - 1] - bottom_idx[0][bottom_idx_len - 1]
             d_days = days/10
-            if (up_days < d_days) or (up_days > d_days + 3):
+            #if (up_days < d_days) or (up_days > d_days + 3):
+            #    return False
+            if up_days < 3:
                 return False
         else:
             stock_eva = [[0, 0] for i in range(20)]
@@ -743,7 +743,7 @@ class ZbUtil:
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
-    zbUtil.set_calc_date('20211112')
+    zbUtil.set_calc_date('20220107')
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
     #zbUtil.mean_20_filter()
@@ -753,10 +753,16 @@ if __name__ == '__main__':
     #zbUtil.gen_stock_list_by_fina_indi()
 
     #zbUtil.below_days_mean_and_guandian(100, 20)
-    zbUtil.below_days_mean_and_guandian_pri(100, 20)
+
+    # 20日均线 低于 100日均线，20日均线拐点向上
+    #zbUtil.below_days_mean_and_guandian_pri(100, 20)
+
     #zbUtil.mean_20_exceed_mean_100()
     #zbUtil.mean_20_exceed_mean_100_pri()
     #zbUtil.select_stocks_by_fina_indi()
+
+    # X天内 Y天 涨幅超过 Z(9.9)
+    zbUtil.apmlitude.getZhangTingNum(100, 10, 9.9)
 
 
 
