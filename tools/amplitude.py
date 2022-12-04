@@ -20,7 +20,7 @@ class Amplitude:
         st_code = ts_code.split('.')[0]
         file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
         if not os.path.exists(file_stock):
-            print file_stock + " is missing"
+            print(file_stock + " is missing")
             return 0
 
         # cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
@@ -48,6 +48,6 @@ class Amplitude:
                 result.append((stock, cal_num))
 
         result = sorted(result, key=itemgetter(1), reverse=True)
-        print result
+        print(result)
 
         return result

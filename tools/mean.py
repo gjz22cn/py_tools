@@ -27,7 +27,7 @@ class Mean:
             return False
 
         if df.shape[0] < (19 + days):
-            print "%s's data is wrong %d" % (ts_code, df.shape[0])
+            print(st_code, df.shape[0], "data is wrong")
             return False
 
         df1 = df['close'][-19 - days:].reset_index()
@@ -36,14 +36,9 @@ class Mean:
         for i in range(20):
             m_a.append(df1['close'][i:i + days].mean())
 
-        if v_a[19] > m_a[19]:
-            return False
-
-        if v_a[18] > m_a[18]:
-            return False
-
-        if v_a[17] > m_a[17]:
-            return False
+        for i in range(30):
+            if v_a[19-i] > m_a[19-i]:
+                return False
 
         return True
 
@@ -51,7 +46,7 @@ class Mean:
         st_code = ts_code.split('.')[0]
         file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
         if not os.path.exists(file_stock):
-            print file_stock + " is missing"
+            print(file_stock + " is missing")
             return False
 
         # cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
@@ -100,4 +95,20 @@ class Mean:
             if self.below_days_mean(stock, mean_days):
                 result_2.append(stock)
 
-        print result_2
+        return result_2
+
+    def mean_inflection_with_input_stocks(self, stocks, mean_inflection_days):
+        result = []
+        for stock in stocks:
+            if self.mean_inflection_one_stock(stock, mean_inflection_days):
+                result.append(stock)
+
+        return result
+
+    def below_days_mean_with_input_stocks(self, stocks, mean_days):
+        result = []
+        for stock in stocks:
+            if self.below_days_mean(stock, mean_days):
+                result.append(stock)
+
+        return result

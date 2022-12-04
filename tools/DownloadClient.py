@@ -239,7 +239,7 @@ class DownloadClient:
         try:
             df_new = self.pro.daily(ts_code=ts_code, start_date=start_date, end_date=today)
         except:
-            print "error " + ts_code
+            print("error " + ts_code)
         else:
             columns = ['ts_code', 'trade_date', 'open', 'high', 'low', 'close', 'pre_close', 'change', 'pct_chg', 'vol',
                    'amount']

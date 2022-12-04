@@ -6,8 +6,9 @@ import pandas as pd
 from StUtil import StUtil
 import scipy.signal as signal
 import matplotlib.pyplot as plt
-from amplitude import Amplitude
 from mean import Mean
+from kdj import Kdj
+from tools.amplitude import Amplitude
 
 
 class ZbUtil:
@@ -27,6 +28,7 @@ class ZbUtil:
         self.stUtil = StUtil(self.root_dir)
         self.apmlitude = Amplitude()
         self.mean = Mean()
+        self.kdj = Kdj()
         self.calc_date = 'unknown'
         self.eva = [[0, 0] for i in range(20)]
         self.stock_list = []
@@ -286,7 +288,7 @@ class ZbUtil:
 
         df_39 = df['close'][-39:].reset_index()
         if df_39.shape[0] != 39:
-            print "%s's data is wrong %d" % (ts_code, df_39.shape[0])
+            print("%s's data is wrong %d" % (ts_code, df_39.shape[0]))
             return False
 
         v_20 = df_39['close'][-20:].values
@@ -296,11 +298,11 @@ class ZbUtil:
 
         if self.mean_filter_method_0(v_20, m_20):
             result[0].append(ts_code)
-            print "M1 add %s" % ts_code
+            print("M1 add %s" % ts_code)
 
         if self.mean_filter_method_1(v_20, m_20):
             result[1].append(ts_code)
-            print "M2 add %s" % ts_code
+            print("M2 add %s" % ts_code)
 
         return result
 
@@ -316,7 +318,7 @@ class ZbUtil:
             return False
 
         if df.shape[0] < (19 + days):
-            print "%s's data is wrong %d" % (ts_code, df.shape[0])
+            print("%s's data is wrong %d" % (ts_code, df.shape[0]))
             return False
 
         df1 = df['close'][-19 - days:].reset_index()
@@ -328,11 +330,11 @@ class ZbUtil:
 
         if self.mean_filter_method_2(v_a, m_a):
             result[0].append(ts_code)
-            print "M2 add %s" % ts_code
+            print("M2 add %s" % ts_code)
 
         if self.mean_filter_method_3(v_a, m_a):
             result[1].append(ts_code)
-            print "M3 add %s" % ts_code
+            print("M3 add %s" % ts_code)
 
         return result
 
@@ -342,8 +344,8 @@ class ZbUtil:
         for stock in stocks:
             self.mean_filter_one_stock(result, stock)
 
-        print result[0]
-        print result[1]
+        print(result[0])
+        print(result[1])
         len0 = len(result[0])
         len1 = len(result[1])
 
@@ -364,8 +366,8 @@ class ZbUtil:
         for stock in stocks:
             self.mean_filter_one_stock_new(result, stock, 100)
 
-        print result[0]
-        print result[1]
+        print(result[0])
+        print(result[1])
         len0 = len(result[0])
         len1 = len(result[1])
 
@@ -460,7 +462,7 @@ class ZbUtil:
         st_code = ts_code.split('.')[0]
         file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
         if not os.path.exists(file_stock):
-            print file_stock + " is missing"
+            print(file_stock + " is missing")
             return False
 
         # cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
@@ -524,7 +526,7 @@ class ZbUtil:
                     v = float(eva1[0]) / float(eva1[0] + eva1[1]) * 100
                     if v > 80:
                         record = 1
-                        print ts_code, tmp_i, "%.1f%%" % v
+                        print(ts_code, tmp_i, "%.1f%%" % v)
                         self.guaidian_stock_append(pd.DataFrame({
                             'days': [days],
                             'ts_code': [ts_code],
@@ -547,7 +549,7 @@ class ZbUtil:
         return True
 
     def mean_guaidian_filter(self, days, ch):
-        print "\n---%d---" % days
+        print("\n---%d---" % days)
         for eva in self.eva:
             eva[0] = 0
             eva[1] = 0
@@ -563,10 +565,10 @@ class ZbUtil:
                 if (eva[0] + eva[1]) > 0:
                     v = float(eva[0]) / float(eva[0] + eva[1]) * 100
                     if v > 20:
-                        print i, "%.1f%%" % v
+                        print(i, "%.1f%%" % v)
                 i += 1
 
-            print self.stock_list
+            print(self.stock_list)
             return
 
         file_out = os.path.join(self.zb_dir, 'guaidian_' + self.calc_date + '.csv')
@@ -607,7 +609,7 @@ class ZbUtil:
             return False
 
         if df.shape[0] < (19 + days):
-            print "%s's data is wrong %d" % (ts_code, df.shape[0])
+            print("%s's data is wrong %d") % (ts_code, df.shape[0])
             return False
 
         df1 = df['close'][-19 - days:].reset_index()
@@ -644,7 +646,7 @@ class ZbUtil:
             if self.below_days_mean(stock, mean_days):
                 result_2.append(stock)
 
-        print result_2
+        print(result_2)
 
     def below_days_mean_and_guandian_pri(self, mean_days, guaidian_days):
         result = []
@@ -659,7 +661,7 @@ class ZbUtil:
             if self.below_days_mean(stock, mean_days):
                 result_2.append(stock)
 
-        print result_2
+        print(result_2)
 
     def calc_mean(self, m_r, ts_code, days, num):
         st_code = ts_code.split('.')[0]
@@ -673,7 +675,7 @@ class ZbUtil:
             return False
 
         if df.shape[0] < ((num - 1) + days):
-            print "%s's data is wrong %d" % (ts_code, df.shape[0])
+            print("%s's data is wrong %d" % (ts_code, df.shape[0]))
             return False
 
         df1 = df['close'][0 - (num - 1) - days:].reset_index()
@@ -710,7 +712,7 @@ class ZbUtil:
             if self.mean_20_exceed_mean_100_one_stock(stock):
                 f_r.append(stock)
 
-        print f_r
+        print(f_r)
 
     def mean_20_exceed_mean_100_pri(self):
         f_r = []
@@ -719,7 +721,7 @@ class ZbUtil:
             if self.mean_20_exceed_mean_100_one_stock(stock):
                 f_r.append(stock)
 
-        print f_r
+        print(f_r)
 
     def stock_fina_indi_selector_1(self, st_code):
         file_path = os.path.join(self.fina_indicator_dir, st_code + '.csv')
@@ -757,7 +759,7 @@ class ZbUtil:
             if self.stock_fina_indi_selector_1(stock):
                 result.append(stock)
 
-        print result
+        print(result)
 
     def gen_stock_list_by_fina_indi(self):
         out = []
@@ -778,7 +780,7 @@ class ZbUtil:
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
-    zbUtil.set_calc_date('20220121')
+    zbUtil.set_calc_date('20221202')
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
     # zbUtil.mean_20_filter()
@@ -801,4 +803,22 @@ if __name__ == '__main__':
     # zbUtil.apmlitude.getZhangTingNum(10, 7, 9.9)
 
     # 20日均线 低于 100日均线，20日均线拐点向上
-    zbUtil.mean.below_days_mean_and_inflection(100, 20)
+    #result = zbUtil.mean.below_days_mean_and_inflection(100, 20)
+    #print("mean below and inflection:", result)
+
+
+    stocks = zbUtil.kdj.kdj_j_below(20)
+    print("KDJ J below 20:", stocks)
+
+    result = zbUtil.mean.below_days_mean_with_input_stocks(stocks, 100)
+    print("mean 20 below mean 100:", result)
+
+    result2 = zbUtil.mean.mean_inflection_with_input_stocks(result, 20)
+    print("mean 20 inflection:", result2)
+    result3 = list(set(result).difference(set(result2)))
+    print("mean 20 blow not inflection:", result3)
+
+
+
+
+

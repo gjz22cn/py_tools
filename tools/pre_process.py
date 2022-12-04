@@ -9,8 +9,8 @@ import time
 import datetime
 import threading
 from time import sleep, ctime
-import matplotlib.pyplot as plt
-import seaborn
+#import matplotlib.pyplot as plt
+#import seaborn
 
 
 # df = ts.get_tick_data('002001', date='2018-11-29', src='tt')
@@ -861,22 +861,23 @@ class DataUtil:
     def get_fina_indicator_for_one_stock(self, st_code):
         file_path = os.path.join(self.fina_indicator_dir, st_code + '.csv')
         if os.path.exists(file_path):
-            print 'skip ' + st_code
+            print('skip ' + st_code)
             return
 
         try:
-            print st_code, self.eva_date
+            print(st_code, self.eva_date)
             df = self.pro.query('fina_indicator', ts_code=st_code, start_date='20210101', end_date=str(self.eva_date))
-        except Exception,err:
+        except Exception as err:
             return
         else:
             df.to_csv(os.path.join(self.fina_indicator_dir, st_code+'.csv'), encoding="utf_8_sig")
 
     def get_all_fina_indicator(self):
         stocks = self.get_all_stocks(3, 'stock_list_tmp.csv')
-        print stocks
+        print(stocks)
         for stock in stocks:
             self.get_fina_indicator_for_one_stock(stock)
+
 
 if __name__ == '__main__':
     dataUtil = DataUtil('../')
@@ -921,10 +922,10 @@ if __name__ == '__main__':
     # steps for corr calc start
     #############################################################################
     # Step0: set global var
-    dataUtil.set_eva_date(20220121)
+    dataUtil.set_eva_date(20221202)
 
     # Step1: update stock data
-    dataUtil.download_for_stocks_2(3, '20220121')
+    dataUtil.download_for_stocks_2(3, '20221202')
     #dataUtil.download_for_stocks_pri(3, '20211112')
 
     #dataUtil.download_for_stocks_2(3, None)
