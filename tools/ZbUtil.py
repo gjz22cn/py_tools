@@ -812,6 +812,8 @@ if __name__ == '__main__':
 
     result = zbUtil.mean.below_days_mean_with_input_stocks(stocks, 100)
     print("mean 20 below mean 100:", result)
+    r_notBelow = list(set(stocks).difference(set(result)))
+    print("mean 20 not below mean 100:", result)
 
     result2 = zbUtil.mean.mean_inflection_with_input_stocks(result, 20)
     print("mean 20 inflection:", result2)

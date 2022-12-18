@@ -922,10 +922,10 @@ if __name__ == '__main__':
     # steps for corr calc start
     #############################################################################
     # Step0: set global var
-    dataUtil.set_eva_date(20221202)
+    dataUtil.set_eva_date(20221216)
 
     # Step1: update stock data
-    dataUtil.download_for_stocks_2(3, '20221202')
+    dataUtil.download_for_stocks_2(3, '20221216')
     #dataUtil.download_for_stocks_pri(3, '20211112')
 
     #dataUtil.download_for_stocks_2(3, None)
