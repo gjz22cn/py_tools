@@ -12,7 +12,7 @@ class Kdj:
         self.name = 'Kdj'
         self.root_dir = GV.ROOT_DIR
         self.stocks_dir = GV.STOCKS_DIR
-        self.stUtil = StUtil(self.root_dir)
+        self.stUtil = StUtil()
         self.stock_list_file = GV.STOCK_LIST_ALL
 
     def calc_kdj(self, ts_code):

@@ -12,7 +12,7 @@ class Mean:
         self.name = 'Mean'
         self.root_dir = GV.ROOT_DIR
         self.stocks_dir = GV.STOCKS_DIR
-        self.stUtil = StUtil(self.root_dir)
+        self.stUtil = StUtil()
         self.stock_list_file = GV.STOCK_LIST_ALL
 
     def below_days_mean(self, ts_code, days):

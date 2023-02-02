@@ -778,6 +778,63 @@ class ZbUtil:
         file_out = os.path.join(self.root_dir, 'stock_list_pri.csv')
         df_out.to_csv(file_out, columns=df_out.columns, mode='w', header=True, index=False, encoding="utf_8_sig")
 
+    def calc_mean_by_df(self, m_r, df, days, num):
+        if df is None:
+            return False
+
+        df1 = df['close'][0 - (num - 1) - days:].reset_index()
+
+        for i in range(num):
+            m_r.append(df1['close'][i:i + days].mean())
+
+        return True
+
+    def x_below_y_high(self, ts_code, b, h):
+        eval_days = 30
+        m_20 = []
+
+        st_code = ts_code.split('.')[0]
+        file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
+
+        # cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
+        cols = ['trade_date', 'close', 'vol', 'amount']
+        df = pd.read_csv(file_stock, header=0, usecols=cols, dtype={'trade_date': str}, encoding='utf-8')
+
+        if df is None:
+            return False
+
+        if df.shape[0] < ((eval_days - 1) + 20):
+            print("%s's data is wrong %d" % (ts_code, df.shape[0]))
+            return False
+
+        if self.calc_mean_by_df(m_20, df, 20, eval_days) is False:
+            return False
+
+        v = df[-eval_days:]['close'].values
+
+        for i in range(h):
+            idx = eval_days - i - 1
+            if v[idx] < m_20[idx]:
+                return False
+
+        for i in range(b):
+            idx = eval_days - h - i - 1
+            if v[idx] > m_20[idx]:
+                return False
+
+        return True
+
+    def x_below_y_high_stocks(self, input_stocks, b, h):
+        result = []
+        stocks = input_stocks
+        if input_stocks is None:
+            stocks = self.stUtil.get_all_stocks(3)
+        for stock in stocks:
+            if self.x_below_y_high(stock, b, h):
+                result.append(stock)
+
+        return result
+
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
@@ -808,7 +865,7 @@ if __name__ == '__main__':
     #result = zbUtil.mean.below_days_mean_and_inflection(100, 20)
     #print("mean below and inflection:", result)
 
-    type = 1
+    type = 2
     if type == 1:
         r_alg001 = alg001.get_match_stocks()
         print(r_alg001)
@@ -832,6 +889,9 @@ if __name__ == '__main__':
         print("mean 20 inflection:", result2)
         result3 = list(set(result).difference(set(result2)))
         print("mean 20 blow not inflection:", result3)
+    elif type == 3:
+        stocks = zbUtil.x_below_y_high_stocks(None, 15, 3)
+        print("10 below 3 high mean 20:", stocks)
 
 
 

@@ -13,7 +13,7 @@ class Amplitude:
         self.name = 'Amplitude'
         self.root_dir = GV.ROOT_DIR
         self.stocks_dir = GV.STOCKS_DIR
-        self.stUtil = StUtil(self.root_dir)
+        self.stUtil = StUtil()
         self.stock_list_file = GV.STOCK_LIST_ALL
 
     def get_exceed_increment_days_num(self, ts_code, during_days, increment):

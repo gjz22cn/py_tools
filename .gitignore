@@ -4,3 +4,8 @@ zb/*
 .DS_Store
 *.pyc
 tools/*.pyc
+venv/*
+stock_list_tmp.csv
+stock_list_tmp2.csv
+fina_indi/*
+

@@ -12,7 +12,7 @@ class Alg001:
         self.name = 'alg001'
         self.root_dir = GV.ROOT_DIR
         self.stocks_dir = GV.STOCKS_DIR
-        self.stUtil = StUtil(self.root_dir)
+        self.stUtil = StUtil()
         self.stock_list_file = GV.STOCK_LIST_ALL
 
     def check_per_stock(self, ts_code):
