@@ -45,9 +45,11 @@ class Kdj:
 
         return df[-1:].values[0][-3:]
 
-    def kdj_j_below(self, j):
+    def kdj_j_below(self, input_stocks, j):
         result = []
-        stocks = self.stUtil.get_all_stocks(3)
+        stocks = input_stocks
+        if input_stocks is None:
+            stocks = self.stUtil.get_all_stocks(3)
         for stock in stocks:
             _, _, j_v = self.calc_kdj(stock)
             if j is not None:

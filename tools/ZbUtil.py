@@ -8,6 +8,7 @@ import scipy.signal as signal
 import matplotlib.pyplot as plt
 from mean import Mean
 from kdj import Kdj
+from alg001 import Alg001
 from tools.amplitude import Amplitude
 
 
@@ -25,7 +26,7 @@ class ZbUtil:
         self.corr_dir = os.path.join(self.root_dir, 'corr')
         self.zb_dir = os.path.join(self.root_dir, 'zb')
         self.fina_indicator_dir = os.path.join(self.root_dir, 'fina_indi')
-        self.stUtil = StUtil(self.root_dir)
+        self.stUtil = StUtil()
         self.apmlitude = Amplitude()
         self.mean = Mean()
         self.kdj = Kdj()
@@ -781,6 +782,7 @@ class ZbUtil:
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
     zbUtil.set_calc_date('20221202')
+    alg001 = Alg001()
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
     # zbUtil.mean_20_filter()
@@ -806,19 +808,30 @@ if __name__ == '__main__':
     #result = zbUtil.mean.below_days_mean_and_inflection(100, 20)
     #print("mean below and inflection:", result)
 
+    type = 1
+    if type == 1:
+        r_alg001 = alg001.get_match_stocks()
+        print(r_alg001)
 
-    stocks = zbUtil.kdj.kdj_j_below(20)
-    print("KDJ J below 20:", stocks)
+        r_alg001_mean = zbUtil.mean.below_days_mean_with_input_stocks(r_alg001, 100)
+        print(r_alg001_mean)
 
-    result = zbUtil.mean.below_days_mean_with_input_stocks(stocks, 100)
-    print("mean 20 below mean 100:", result)
-    r_notBelow = list(set(stocks).difference(set(result)))
-    print("mean 20 not below mean 100:", result)
+        r_alg001_mean_kdj = zbUtil.kdj.kdj_j_below(r_alg001_mean, 20)
+        print(r_alg001_mean_kdj)
 
-    result2 = zbUtil.mean.mean_inflection_with_input_stocks(result, 20)
-    print("mean 20 inflection:", result2)
-    result3 = list(set(result).difference(set(result2)))
-    print("mean 20 blow not inflection:", result3)
+    elif type == 2:
+        stocks = zbUtil.kdj.kdj_j_below(None, 20)
+        print("KDJ J below 20:", stocks)
+
+        result = zbUtil.mean.below_days_mean_with_input_stocks(stocks, 100)
+        print("mean 20 below mean 100:", result)
+        r_notBelow = list(set(stocks).difference(set(result)))
+        print("mean 20 not below mean 100:", result)
+
+        result2 = zbUtil.mean.mean_inflection_with_input_stocks(result, 20)
+        print("mean 20 inflection:", result2)
+        result3 = list(set(result).difference(set(result2)))
+        print("mean 20 blow not inflection:", result3)
 
 
 
