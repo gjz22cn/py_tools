@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from mean import Mean
 from kdj import Kdj
 from alg001 import Alg001
-from tools.amplitude import Amplitude
+#from tools.amplitude import Amplitude
 
 
 class ZbUtil:
@@ -27,7 +27,7 @@ class ZbUtil:
         self.zb_dir = os.path.join(self.root_dir, 'zb')
         self.fina_indicator_dir = os.path.join(self.root_dir, 'fina_indi')
         self.stUtil = StUtil()
-        self.apmlitude = Amplitude()
+        #self.apmlitude = Amplitude()
         self.mean = Mean()
         self.kdj = Kdj()
         self.calc_date = 'unknown'
