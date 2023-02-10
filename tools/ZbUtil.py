@@ -818,7 +818,7 @@ class ZbUtil:
                 return False
 
         for i in range(b):
-            idx = eval_days - h - i - 1
+            idx = eval_days - (h+2) - i - 1
             if v[idx] > m_20[idx]:
                 return False
 
@@ -835,10 +835,62 @@ class ZbUtil:
 
         return result
 
+    def mean_20_exceed_mean_100_and_amount(self, ts_code):
+        eval_days = 30
+        m_20 = []
+        m_100 = []
+
+        st_code = ts_code.split('.')[0]
+        file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
+
+        # cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
+        cols = ['trade_date', 'close', 'vol', 'amount']
+        df = pd.read_csv(file_stock, header=0, usecols=cols, dtype={'trade_date': str}, encoding='utf-8')
+
+        if df is None:
+            return False
+
+        if df.shape[0] < ((eval_days - 1) + 20):
+            print("%s's data is wrong %d" % (ts_code, df.shape[0]))
+            return False
+
+        if self.calc_mean_by_df(m_20, df, 20, eval_days) is False:
+            return False
+
+        if self.calc_mean_by_df(m_100, df, 100, eval_days) is False:
+            return False
+
+        a = df[-eval_days:]['amount'].values
+
+        if m_100[eval_days - 1] > m_20[eval_days - 1]:
+            return False
+
+        for i in range(eval_days - 10):
+            if m_20[i] > m_100[i]:
+                return False
+
+        for i in range(5):
+            idx = eval_days - i - 1
+            if a[idx-1] >= a[idx] * 2.2:
+                return True
+
+        return False
+
+    def mean_20_exceed_mean_100_and_amount_stocks(self, input_stocks):
+        result = []
+        stocks = input_stocks
+        if input_stocks is None:
+            stocks = self.stUtil.get_all_stocks(3)
+        for stock in stocks:
+            if self.mean_20_exceed_mean_100_and_amount(stock):
+                result.append(stock)
+
+        return result
+
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
-    zbUtil.set_calc_date('20221202')
+    zbUtil.set_calc_date('20230207')
     alg001 = Alg001()
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
@@ -865,7 +917,7 @@ if __name__ == '__main__':
     #result = zbUtil.mean.below_days_mean_and_inflection(100, 20)
     #print("mean below and inflection:", result)
 
-    type = 2
+    type = 3
     if type == 1:
         r_alg001 = alg001.get_match_stocks()
         print(r_alg001)
@@ -892,6 +944,9 @@ if __name__ == '__main__':
     elif type == 3:
         stocks = zbUtil.x_below_y_high_stocks(None, 15, 3)
         print("10 below 3 high mean 20:", stocks)
+        stocks = zbUtil.mean_20_exceed_mean_100_and_amount_stocks(None)
+        print("m_20 ex m_100 and amount:", stocks)
+
 
 
 
