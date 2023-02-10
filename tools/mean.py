@@ -105,8 +105,12 @@ class Mean:
 
         return result
 
-    def below_days_mean_with_input_stocks(self, stocks, mean_days):
+    def below_days_mean_with_input_stocks(self, input_stocks, mean_days):
         result = []
+        stocks = input_stocks
+        if input_stocks is None:
+            stocks = self.stUtil.get_all_stocks(3)
+
         for stock in stocks:
             if self.below_days_mean(stock, mean_days):
                 result.append(stock)

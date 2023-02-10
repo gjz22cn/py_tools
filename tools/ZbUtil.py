@@ -947,6 +947,12 @@ if __name__ == '__main__':
         stocks = zbUtil.mean_20_exceed_mean_100_and_amount_stocks(None)
         print("m_20 ex m_100 and amount:", stocks)
 
+        result = zbUtil.mean.below_days_mean_with_input_stocks(None, 100)
+        print("mean 20 below mean 100:", result)
+        result2 = zbUtil.mean.mean_inflection_with_input_stocks(result, 20)
+        print("mean 20 inflection:", result2)
+
+
 
 
 
