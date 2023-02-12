@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from mean import Mean
 from kdj import Kdj
 from alg001 import Alg001
+from Report import Report
 #from tools.amplitude import Amplitude
 
 
@@ -887,11 +888,44 @@ class ZbUtil:
 
         return result
 
+    def v_exceed_mean_x(self, ts_code, mean_days):
+        st_code = ts_code.split('.')[0]
+        file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
+
+        cols = ['trade_date', 'close', 'vol', 'amount']
+        df = pd.read_csv(file_stock, header=0, usecols=cols, dtype={'trade_date': str}, encoding='utf-8')
+
+        if df is None:
+            return False
+
+        if df.shape[0] < mean_days:
+            print("%s's data is wrong %d" % (ts_code, df.shape[0]))
+            return False
+
+        v = df[-mean_days:]['close'].values
+
+        if v[mean_days-1] > v.mean():
+            return True
+
+        return False
+
+    def v_exceed_mean_x_stocks(self, input_stocks, mean_days):
+        result = []
+        stocks = input_stocks
+        if input_stocks is None:
+            stocks = self.stUtil.get_all_stocks(3)
+        for stock in stocks:
+            if self.v_exceed_mean_x(stock, mean_days):
+                result.append(stock)
+
+        return result
+
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
     zbUtil.set_calc_date('20230207')
     alg001 = Alg001()
+    reporter = Report()
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
     # zbUtil.mean_20_filter()
@@ -944,13 +978,17 @@ if __name__ == '__main__':
     elif type == 3:
         stocks = zbUtil.x_below_y_high_stocks(None, 15, 3)
         print("10 below 3 high mean 20:", stocks)
+        reporter.send_report("10 below 3 high mean 20:", stocks)
         stocks = zbUtil.mean_20_exceed_mean_100_and_amount_stocks(None)
         print("m_20 ex m_100 and amount:", stocks)
+        reporter.send_report("m_20 ex m_100 and amount:", stocks)
 
         result = zbUtil.mean.below_days_mean_with_input_stocks(None, 100)
-        print("mean 20 below mean 100:", result)
-        result2 = zbUtil.mean.mean_inflection_with_input_stocks(result, 20)
-        print("mean 20 inflection:", result2)
+        #print("mean 20 below mean 100:", result)
+        result2 = zbUtil.v_exceed_mean_x_stocks(result, 20)
+        print("between mean 20 and mean 100:", result2)
+        reporter.send_report("between mean 20 and mean 100:", result2)
+
 
 
 
