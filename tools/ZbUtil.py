@@ -898,16 +898,25 @@ class ZbUtil:
         if df is None:
             return False
 
-        if df.shape[0] < mean_days:
+        if df.shape[0] < (mean_days + 4):
             print("%s's data is wrong %d" % (ts_code, df.shape[0]))
             return False
 
-        v = df[-mean_days:]['close'].values
+        v = df[-mean_days-3:]['close'].values
 
-        if v[mean_days-1] > v.mean():
-            return True
+        if v[19] > v[0:19].mean():
+            return False
 
-        return False
+        if v[20] < v[1:20].mean():
+            return False
+
+        if v[21] < v[2:21].mean():
+            return False
+
+        if v[22] < v[3:22].mean():
+            return False
+
+        return True
 
     def v_exceed_mean_x_stocks(self, input_stocks, mean_days):
         result = []
