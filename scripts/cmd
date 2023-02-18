@@ -1,0 +1,11 @@
+create database stock default character set utf8mb4 collate utf8mb4_unicode_ci;
+CREATE TABLE `price_notify` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `st_code` varchar(12) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price_buy` float,
+  `price_sale` float,
+  PRIMARY KEY (`id`)
+);
+
+insert into price_notify(st_code, price_buy, price_sale) values('600108.SH', 3.10, 3.40);
+insert into price_notify(st_code, price_buy, price_sale) values('603111.SH', 4.20, 4.60);
