@@ -10,6 +10,7 @@ from mean import Mean
 from kdj import Kdj
 from alg001 import Alg001
 from Report import Report
+from PriceNotify import PriceNotify
 #from tools.amplitude import Amplitude
 
 
@@ -935,6 +936,7 @@ if __name__ == '__main__':
     zbUtil.set_calc_date('20230207')
     alg001 = Alg001()
     reporter = Report()
+    priceNotify = PriceNotify()
     # zbUtil.kdj_filter(3)
     # zbUtil.kdj_wk_filter(3)
     # zbUtil.mean_20_filter()
@@ -985,6 +987,7 @@ if __name__ == '__main__':
         result3 = list(set(result).difference(set(result2)))
         print("mean 20 blow not inflection:", result3)
     elif type == 3:
+        '''
         stocks = zbUtil.x_below_y_high_stocks(None, 15, 3)
         print("10 below 3 high mean 20:", stocks)
         reporter.send_report("10 below 3 high mean 20:", stocks)
@@ -997,6 +1000,14 @@ if __name__ == '__main__':
         result2 = zbUtil.v_exceed_mean_x_stocks(result, 20)
         print("between mean 20 and mean 100:", result2)
         reporter.send_report("between mean 20 and mean 100:", result2)
+        '''
+
+        buy, sale = priceNotify.calc()
+        if len(buy):
+            reporter.send_report("price notify buy:", buy)
+        if len(sale):
+            reporter.send_report("price notify sale:", sale)
+
 
 
 
