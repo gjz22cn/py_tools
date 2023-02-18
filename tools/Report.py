@@ -25,8 +25,23 @@ class Report:
         url = f'https://oapi.dingtalk.com/robot/send?access_token={self.access_token}&timestamp={timestamp}&sign={sign}'
         return url
 
-    def send_report(self, type_str, stocks):
+    def send_report_single(self, type_str, stocks):
+        print(type_str, stocks)
+        num = len(stocks)
+        if num < 1:
+            return
+
         url = self.get_url()
+        text_str = "#### **" + self.today + " " + type_str + "**\n"
+
+        i = 1
+        for stock in stocks:
+            if int(i % 2) == 1:
+                text_str = text_str + "- " + stock
+            elif int(i % 2) == 0:
+                text_str = text_str + " " + stock + "\n"
+            i = i + 1
+
         header = {
             "Content-Type": "application/json",
             "Charset": "UTF-8"
@@ -34,11 +49,50 @@ class Report:
         data = {
             "msgtype": "markdown",
             "markdown": {"title": "DailyReport",
-                         "text": {
-                             "Type": type_str,
-                             "Date": self.today,
-                             "Members": stocks
-                         }
+                         "text": text_str
+                         },
+            "at": {
+                "isAtAll": False
+            }
+        }
+
+        r = requests.post(url=url, headers=header, data=json.dumps(data))
+        r_status = json.loads(r.text)
+        if r_status['errcode'] == 0:
+            return True
+
+        return False
+
+    def send_report_list(self, reports):
+        url = self.get_url()
+        text_str = "## **---" + self.today + "---**\n"
+
+        for item in reports:
+            print(item[0], item[1])
+            type_str = item[0]
+            stocks = item[1]
+            num = len(stocks)
+            if num < 1:
+                continue
+
+            text_str = text_str + "#### **" + type_str + "**\n"
+
+            i = 1
+            for stock in stocks:
+                if int(i % 2) == 1:
+                    text_str = text_str + "- " + stock
+                elif int(i % 2) == 0:
+                    text_str = text_str + " " + stock + "\n"
+                i = i + 1
+
+        header = {
+            "Content-Type": "application/json",
+            "Charset": "UTF-8"
+        }
+        data = {
+            "msgtype": "markdown",
+            "markdown": {"title": "DailyReport",
+                         "text": text_str
                          },
             "at": {
                 "isAtAll": False

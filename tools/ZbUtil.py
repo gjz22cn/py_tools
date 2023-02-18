@@ -791,9 +791,9 @@ class ZbUtil:
 
         return True
 
-    def x_below_y_high(self, ts_code, b, h):
-        eval_days = 30
-        m_20 = []
+    def x_below_y_high(self, ts_code, m_days, b, h, e_p):
+        eval_days = b+h+10
+        mean_v = []
 
         st_code = ts_code.split('.')[0]
         file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
@@ -805,34 +805,37 @@ class ZbUtil:
         if df is None:
             return False
 
-        if df.shape[0] < ((eval_days - 1) + 20):
+        if df.shape[0] < ((eval_days - 1) + m_days):
             print("%s's data is wrong %d" % (ts_code, df.shape[0]))
             return False
 
-        if self.calc_mean_by_df(m_20, df, 20, eval_days) is False:
+        if self.calc_mean_by_df(mean_v, df, m_days, eval_days) is False:
             return False
 
         v = df[-eval_days:]['close'].values
 
+        if v[-1] - mean_v[-1] > v[-1] * e_p:
+            return False
+
         for i in range(h):
             idx = eval_days - i - 1
-            if v[idx] < m_20[idx]:
+            if v[idx] < mean_v[idx]:
                 return False
 
         for i in range(b):
             idx = eval_days - (h+2) - i - 1
-            if v[idx] > m_20[idx]:
+            if v[idx] > mean_v[idx]:
                 return False
 
         return True
 
-    def x_below_y_high_stocks(self, input_stocks, b, h):
+    def x_below_y_high_stocks(self, input_stocks, m_days, b, h, e_p):
         result = []
         stocks = input_stocks
         if input_stocks is None:
             stocks = self.stUtil.get_all_stocks(3)
         for stock in stocks:
-            if self.x_below_y_high(stock, b, h):
+            if self.x_below_y_high(stock, m_days, b, h, e_p):
                 result.append(stock)
 
         return result
@@ -930,6 +933,38 @@ class ZbUtil:
 
         return result
 
+    def is_amount(self, ts_code, multiple):
+        eval_days = 5
+        st_code = ts_code.split('.')[0]
+        file_stock = os.path.join(self.stocks_dir, st_code + '.csv')
+
+        # cols = ['trade_date', 'open', 'high', 'low', 'close', 'pct_chg', 'vol', 'amount']
+        cols = ['trade_date', 'close', 'vol', 'amount']
+        df = pd.read_csv(file_stock, header=0, usecols=cols, dtype={'trade_date': str}, encoding='utf-8')
+
+        if df is None:
+            return False
+
+        a = df[-eval_days:]['amount'].values
+
+        for i in range(5):
+            idx = eval_days - i - 1
+            if a[idx-1] >= a[idx] * 2.2:
+                return True
+
+        return False
+
+    def amount_stocks(self, input_stocks, multiple):
+        result = []
+        stocks = input_stocks
+        if input_stocks is None:
+            stocks = self.stUtil.get_all_stocks(3)
+        for stock in stocks:
+            if self.is_amount(stock, multiple):
+                result.append(stock)
+
+        return result
+
 
 if __name__ == '__main__':
     zbUtil = ZbUtil('../')
@@ -987,24 +1022,35 @@ if __name__ == '__main__':
         result3 = list(set(result).difference(set(result2)))
         print("mean 20 blow not inflection:", result3)
     elif type == 3:
-        stocks = zbUtil.x_below_y_high_stocks(None, 15, 3)
-        print("10 below 3 high mean 20:", stocks)
-        reporter.send_report("10 below 3 high mean 20:", stocks)
-        stocks = zbUtil.mean_20_exceed_mean_100_and_amount_stocks(None)
-        print("m_20 ex m_100 and amount:", stocks)
-        reporter.send_report("m_20 ex m_100 and amount:", stocks)
+        reports = []
+        alg_name = "Ex m20:"
+        stocks = zbUtil.x_below_y_high_stocks(None, 20, 15, 3, 0.05)
+        reports.append((alg_name, stocks))
 
+        #stocks = zbUtil.mean_20_exceed_mean_100_and_amount_stocks(None)
+        #print("m_20 ex m_100 and amount:", stocks)
+        #reporter.send_report("m_20 ex m_100 and amount:", stocks)
+
+        alg_name = "Ex m100"
+        stocks = zbUtil.x_below_y_high_stocks(None, 100, 30, 5, 0.05)
+        result = zbUtil.amount_stocks(stocks, 2.0)
+        reports.append((alg_name+"(Am):", result))
+        result2 = list(set(stocks).difference(set(result)))
+        reports.append((alg_name+"(notAm):", result2))
+
+        alg_name = "In m_[20,100]:"
         result = zbUtil.mean.below_days_mean_with_input_stocks(None, 100)
-        #print("mean 20 below mean 100:", result)
         result2 = zbUtil.v_exceed_mean_x_stocks(result, 20)
-        print("between mean 20 and mean 100:", result2)
-        reporter.send_report("between mean 20 and mean 100:", result2)
+        reports.append((alg_name, result2))
 
+        alg_name = "PriceNotify"
         buy, sale = priceNotify.calc()
         if len(buy):
-            reporter.send_report("price notify buy:", buy)
+            reports.append((alg_name+"(buy):", buy))
         if len(sale):
-            reporter.send_report("price notify sale:", sale)
+            reports.append((alg_name+"(sale):", sale))
+
+        reporter.send_report_list(reports)
 
 
 
