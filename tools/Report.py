@@ -78,12 +78,18 @@ class Report:
             text_str = text_str + "#### **" + type_str + "**\n"
 
             i = 1
+            flag = 0
             for stock in stocks:
                 if int(i % 2) == 1:
                     text_str = text_str + "- " + stock
+                    flag = 1
                 elif int(i % 2) == 0:
                     text_str = text_str + " " + stock + "\n"
+                    flag = 0
                 i = i + 1
+
+            if flag == 1:
+                text_str = text_str + "\n"
 
         header = {
             "Content-Type": "application/json",
