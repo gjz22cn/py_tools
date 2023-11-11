@@ -12,3 +12,4 @@ pip install tushare -i https://mirrors.aliyun.com/pypi/simple
 pip install scipy -i https://mirrors.aliyun.com/pypi/simple
 pip install matplotlib -i https://mirrors.aliyun.com/pypi/simple
 root@218.78.109.52
+0 18 * * 1-5 /root/code/py_tools/stocks.sh all
